@@ -221,8 +221,9 @@ export default function HomePage() {
           {FAQ.map((f, idx) => (
             <details
               key={`${f.q}-${idx}`}
-              className={`group overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-slate-100 ${idx === 1 ? "border-l-4 border-slate-800" : ""
-                }`}
+              className={`group overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-slate-100 ${
+                idx === 1 ? "border-l-4 border-slate-800" : ""
+              }`}
               open={idx === 1}
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-4 py-3 text-xs font-bold uppercase tracking-wide text-slate-800">

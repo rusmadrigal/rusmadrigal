@@ -16,12 +16,8 @@ export default function HeaderLogo({
       </span>
 
       <span className="flex flex-col leading-tight">
-        <span className="text-sm font-semibold tracking-wide text-slate-900">
-          {brandName}
-        </span>
-        <span className="text-[11px] uppercase tracking-wider text-slate-500">
-          {tagline}
-        </span>
+        <span className="text-sm font-semibold tracking-wide text-slate-900">{brandName}</span>
+        <span className="text-[11px] uppercase tracking-wider text-slate-500">{tagline}</span>
       </span>
     </Link>
   );
