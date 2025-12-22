@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Header from "./components/home/header/Header";
 
 const SERVICES = [
   {
@@ -98,46 +99,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#fbfbf6] text-slate-900">
       {/* Header */}
-      <header className="mx-auto max-w-6xl px-6 py-5">
-        <nav className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white">
-              <span className="h-3 w-3 rounded-full bg-emerald-500" />
-            </span>
-            <span className="text-sm font-semibold tracking-wide">
-              Rus Madrigal
-            </span>
-          </Link>
-
-          <div className="hidden items-center gap-7 text-sm md:flex">
-            <Link className="text-amber-700" href="#">
-              Home
-            </Link>
-            <Link className="hover:text-slate-700" href="#">
-              About me
-            </Link>
-            <Link className="hover:text-slate-700" href="#">
-              Services
-            </Link>
-            <Link className="hover:text-slate-700" href="#">
-              FAQ
-            </Link>
-            <Link className="hover:text-slate-700" href="#">
-              Blog
-            </Link>
-            <Link className="hover:text-slate-700" href="#">
-              Contact
-            </Link>
-          </div>
-
-          <Link
-            href="#"
-            className="rounded-md bg-emerald-600 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white shadow-sm hover:bg-emerald-700"
-          >
-            Get Started
-          </Link>
-        </nav>
-      </header>
+      <Header />
 
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-6 pb-10 pt-4">
@@ -151,8 +113,8 @@ export default function HomePage() {
             </h1>
 
             <p className="mt-5 max-w-md text-sm leading-6 text-slate-600">
-              Nulla porttitor accumsan tincidunt. Pellentesque adipiscing elit.
-              Integer eget felis porttitor volutpat.
+              Nulla porttitor accumsan tincidunt. Pellentesque adipiscing elit. Integer eget felis
+              porttitor volutpat.
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-4">
@@ -190,16 +152,11 @@ export default function HomePage() {
         {/* Partner strip */}
         <div className="mt-10 grid gap-3 rounded-xl bg-white p-4 shadow-sm md:grid-cols-4">
           {["Mail Chimp", "Slack", "Instagram", "Twitter"].map((x) => (
-            <div
-              key={x}
-              className="flex items-center gap-3 rounded-lg border border-slate-100 p-3"
-            >
+            <div key={x} className="flex items-center gap-3 rounded-lg border border-slate-100 p-3">
               <div className="h-9 w-9 rounded-full bg-slate-100" />
               <div className="leading-tight">
                 <div className="text-xs font-semibold">{x}</div>
-                <div className="text-[10px] uppercase tracking-wide text-slate-500">
-                  News Feed
-                </div>
+                <div className="text-[10px] uppercase tracking-wide text-slate-500">News Feed</div>
               </div>
             </div>
           ))}
@@ -213,16 +170,10 @@ export default function HomePage() {
             <div className="relative overflow-hidden rounded-2xl bg-white shadow-sm">
               <div className="aspect-[16/10] bg-slate-100" />
               <div className="absolute left-4 top-4 rounded-md bg-emerald-600 px-3 py-2 text-xs font-bold text-white">
-                300+{" "}
-                <div className="text-[10px] font-semibold opacity-90">
-                  Success Project
-                </div>
+                300+ <div className="text-[10px] font-semibold opacity-90">Success Project</div>
               </div>
               <div className="absolute bottom-4 left-4 rounded-md bg-amber-300 px-3 py-2 text-xs font-bold text-slate-900">
-                100+{" "}
-                <div className="text-[10px] font-semibold opacity-90">
-                  Award Win
-                </div>
+                100+ <div className="text-[10px] font-semibold opacity-90">Award Win</div>
               </div>
             </div>
           </div>
@@ -230,9 +181,8 @@ export default function HomePage() {
           <div>
             <h2 className="text-3xl font-extrabold">Something Know About Me</h2>
             <p className="mt-4 text-sm leading-6 text-slate-600">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              it is over 2000 years old.
+              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+              piece of classical Latin literature from 45 BC, it is over 2000 years old.
             </p>
             <Link
               href="#"
@@ -246,16 +196,11 @@ export default function HomePage() {
 
       {/* Services */}
       <section className="mx-auto max-w-6xl px-6 py-14">
-        <h2 className="text-center text-3xl font-extrabold">
-          What Services I Provide You
-        </h2>
+        <h2 className="text-center text-3xl font-extrabold">What Services I Provide You</h2>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {SERVICES.map((s) => (
-            <div
-              key={s.title}
-              className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100"
-            >
+            <div key={s.title} className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
               <div className="h-10 w-10 rounded-lg bg-amber-100" />
               <h3 className="mt-4 font-bold">{s.title}</h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">{s.desc}</p>
@@ -288,9 +233,7 @@ export default function HomePage() {
                   +
                 </span>
               </summary>
-              <div className="px-4 pb-4 text-sm leading-6 text-slate-600">
-                {f.a}
-              </div>
+              <div className="px-4 pb-4 text-sm leading-6 text-slate-600">{f.a}</div>
             </details>
           ))}
         </div>
@@ -343,13 +286,9 @@ export default function HomePage() {
                 <h3 className="font-bold leading-snug">{b.title}</h3>
                 <p className="mt-2 text-xs text-slate-500">{b.date}</p>
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                  Nulla porttitor accumsan tincidunt. Pellentesque adipiscing
-                  elit.
+                  Nulla porttitor accumsan tincidunt. Pellentesque adipiscing elit.
                 </p>
-                <Link
-                  href="#"
-                  className="mt-4 inline-block text-sm font-semibold text-slate-900"
-                >
+                <Link href="#" className="mt-4 inline-block text-sm font-semibold text-slate-900">
                   Read More
                 </Link>
               </div>
@@ -391,28 +330,23 @@ export default function HomePage() {
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10">
                   <span className="h-3 w-3 rounded-full bg-emerald-400" />
                 </span>
-                <span className="text-sm font-semibold tracking-wide">
-                  Rus Marigal
-                </span>
+                <span className="text-sm font-semibold tracking-wide">Rus Marigal</span>
               </div>
               <p className="mt-4 text-sm leading-6 text-slate-300">
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text.
+                Contrary to popular belief, Lorem Ipsum is not simply random text.
               </p>
             </div>
 
             <div>
               <h4 className="text-sm font-bold">Important Links</h4>
               <ul className="mt-4 space-y-2 text-sm text-slate-300">
-                {["Home", "About Me", "Services", "FAQ", "Blog", "Contact"].map(
-                  (x) => (
-                    <li key={x}>
-                      <Link href="#" className="hover:text-white">
-                        {x}
-                      </Link>
-                    </li>
-                  ),
-                )}
+                {["Home", "About Me", "Services", "FAQ", "Blog", "Contact"].map((x) => (
+                  <li key={x}>
+                    <Link href="#" className="hover:text-white">
+                      {x}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -439,9 +373,7 @@ export default function HomePage() {
             <div>
               <h4 className="text-sm font-bold">Contact Me</h4>
               <div className="mt-4 space-y-2 text-sm text-slate-300">
-                <div>
-                  Address: 15 Division Street, New York, NY 10203, United States
-                </div>
+                <div>Address: 15 Division Street, New York, NY 10203, United States</div>
                 <div>Phone: +1 (123) 456789</div>
                 <div>Email: info@yourdomain.com</div>
               </div>
