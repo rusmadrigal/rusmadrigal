@@ -20,17 +20,17 @@ export default function HeaderNav({ items }: HeaderNavProps) {
           <Link
             key={`${item.label}-${item.href}`}
             href={item.href}
-            className={`group relative pb-1 font-medium transition-colors ${isActive
-                ? "text-amber-700"
-                : "text-slate-700 hover:text-slate-900"
-              }`}
+            className={`group relative pb-1 font-medium transition-colors ${
+              isActive ? "text-amber-700" : "text-slate-700 hover:text-slate-900"
+            }`}
           >
             {item.label}
 
             {/* underline */}
             <span
-              className={`absolute left-1/2 -bottom-0.5 h-[2px] w-0 -translate-x-1/2 rounded-full bg-amber-500 transition-all duration-300 group-hover:w-full ${isActive ? "w-full" : ""
-                }`}
+              className={`absolute left-1/2 -bottom-0.5 h-[2px] w-0 -translate-x-1/2 rounded-full bg-amber-500 transition-all duration-300 group-hover:w-full ${
+                isActive ? "w-full" : ""
+              }`}
             />
           </Link>
         );

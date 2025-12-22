@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Header from "./components/home/header/Header";
+import Hero from "./components/home/hero/Hero";
 
 const SERVICES = [
   {
@@ -101,66 +102,8 @@ export default function HomePage() {
       <Header />
 
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-6 pb-10 pt-4">
-        <div className="grid items-center gap-10 md:grid-cols-2">
-          <div>
-            <h1 className="text-4xl font-extrabold leading-tight text-slate-900 md:text-5xl">
-              Get Your <br />
-              Business To The <br />
-              Top Of The <br />
-              Search Engines
-            </h1>
 
-            <p className="mt-5 max-w-md text-sm leading-6 text-slate-600">
-              Nulla porttitor accumsan tincidunt. Pellentesque adipiscing elit. Integer eget felis
-              porttitor volutpat.
-            </p>
-
-            <div className="mt-7 flex flex-wrap items-center gap-4">
-              <Link
-                href="#"
-                className="rounded-md bg-slate-900 px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-white hover:bg-slate-800"
-              >
-                Contact Me
-              </Link>
-
-              <button
-                type="button"
-                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-slate-800"
-              >
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-amber-300 text-slate-900 shadow-sm">
-                  ▶
-                </span>
-                Watch The Video
-              </button>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="absolute right-0 top-1/2 -z-10 h-64 w-64 -translate-y-1/2 rounded-full bg-amber-200/70 blur-3xl" />
-            <div className="relative mx-auto h-[320px] w-[320px] overflow-hidden rounded-2xl bg-white shadow-[0_25px_60px_rgba(15,23,42,0.15)] md:ml-auto">
-              {/* Placeholder “person” */}
-              <div className="absolute inset-0 bg-gradient-to-b from-white to-slate-50" />
-              <div className="absolute bottom-0 left-0 right-0 h-24 bg-amber-100" />
-              <div className="absolute left-1/2 top-1/2 h-56 w-40 -translate-x-1/2 -translate-y-1/2 rounded-[2rem] bg-amber-500/80" />
-              <div className="absolute left-1/2 top-[42%] h-12 w-12 -translate-x-1/2 rounded-full bg-slate-200" />
-            </div>
-          </div>
-        </div>
-
-        {/* Partner strip */}
-        <div className="mt-10 grid gap-3 rounded-xl bg-white p-4 shadow-sm md:grid-cols-4">
-          {["Mail Chimp", "Slack", "Instagram", "Twitter"].map((x) => (
-            <div key={x} className="flex items-center gap-3 rounded-lg border border-slate-100 p-3">
-              <div className="h-9 w-9 rounded-full bg-slate-100" />
-              <div className="leading-tight">
-                <div className="text-xs font-semibold">{x}</div>
-                <div className="text-[10px] uppercase tracking-wide text-slate-500">News Feed</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <Hero />
 
       {/* About */}
       <section className="mx-auto max-w-6xl px-6 py-14">
