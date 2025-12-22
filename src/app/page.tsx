@@ -105,7 +105,7 @@ export default function HomePage() {
               <span className="h-3 w-3 rounded-full bg-emerald-500" />
             </span>
             <span className="text-sm font-semibold tracking-wide">
-              SEO Xpert
+              Rus Madrigal
             </span>
           </Link>
 
@@ -392,7 +392,7 @@ export default function HomePage() {
                   <span className="h-3 w-3 rounded-full bg-emerald-400" />
                 </span>
                 <span className="text-sm font-semibold tracking-wide">
-                  SEO Xpert
+                  Rus Marigal
                 </span>
               </div>
               <p className="mt-4 text-sm leading-6 text-slate-300">
