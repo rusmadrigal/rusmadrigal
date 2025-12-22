@@ -15,7 +15,10 @@ export default function Header() {
   return (
     <header className="mx-auto max-w-6xl px-6 py-5">
       <nav className="flex items-center justify-between">
-        <HeaderLogo brandName="Rus Madrigal" />
+        <HeaderLogo
+  brandName="Rus Madrigal"
+  tagline="SEO & Web Performance"
+/>
         <HeaderNav items={NAV_ITEMS} />
         <HeaderCTA href="#" label="Get Started" />
       </nav>
