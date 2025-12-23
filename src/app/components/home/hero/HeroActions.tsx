@@ -1,12 +1,12 @@
 type HeroActionsProps = {
   secondaryLabel?: string;
-  helperText?: string;
+
   onSecondaryClick?: () => void;
 };
 
 export default function HeroActions({
   secondaryLabel = "Ver curso de SEO técnico (playlist)",
-  helperText = "Introducción y lecciones prácticas en YouTube",
+
   onSecondaryClick,
 }: HeroActionsProps) {
   return (
@@ -33,7 +33,7 @@ export default function HeroActions({
         </button>
 
         <span className="mt-1 pl-[72px] text-xs text-slate-500">
-          {helperText}
+
         </span>
       </div>
     </div>
