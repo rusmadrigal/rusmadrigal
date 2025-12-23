@@ -11,8 +11,10 @@ export default function HeroActions({
 }: HeroActionsProps) {
   return (
     <div className="mt-10 flex items-start gap-6">
-      {/* Flecha */}
-      <span className="hidden md:block text-3xl leading-none text-slate-400">→</span>
+      {/* Flecha centrada respecto al botón */}
+      <div className="hidden md:flex h-14 w-8 items-center justify-center">
+        <span className="text-3xl leading-none text-slate-400">→</span>
+      </div>
 
       {/* CTA + texto */}
       <div className="flex flex-col">
@@ -30,7 +32,9 @@ export default function HeroActions({
           </span>
         </button>
 
-        <span className="mt-1 pl-[72px] text-xs text-slate-500">{helperText}</span>
+        <span className="mt-1 pl-[72px] text-xs text-slate-500">
+          {helperText}
+        </span>
       </div>
     </div>
   );
