@@ -1,17 +1,32 @@
+"use client";
+
+import { useState } from "react";
 import HeroTitle from "./HeroTitle";
 import HeroActions from "./HeroActions";
+import HeroVideoModal from "./HeroVideoModal";
 
 export default function HeroContent() {
+  const [openVideo, setOpenVideo] = useState(false);
+
   return (
     <div>
-      <HeroTitle lines={["Get Your", "Business To The", "Top Of The", "Search Engines"]} />
+      <HeroTitle lines={["SEO Técnico", "y Rendimiento Web"]} />
 
       <p className="mt-5 max-w-md text-sm leading-6 text-slate-600">
-        Nulla porttitor accumsan tincidunt. Pellentesque adipiscing elit. Integer eget felis
-        porttitor volutpat.
+        Notas y recursos sobre rastreo, indexación, JavaScript SEO y Core Web Vitals. Enfoque
+        práctico, sin humo, con decisiones técnicas reales.
       </p>
 
-      <HeroActions primary={{ label: "Contact Me", href: "#" }} secondaryLabel="Watch The Video" />
+      {/* 👉 AQUÍ está la clave */}
+      <HeroActions onSecondaryClick={() => setOpenVideo(true)} />
+
+      {/* Modal */}
+      <HeroVideoModal
+        open={openVideo}
+        onClose={() => setOpenVideo(false)}
+        title="Curso de SEO Técnico"
+        youtubeId="v-fcnYgebb0"
+      />
     </div>
   );
 }

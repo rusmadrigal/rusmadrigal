@@ -1,35 +1,37 @@
-import Link from "next/link";
-
 type HeroActionsProps = {
-  primary: { label: string; href: string };
   secondaryLabel?: string;
+  helperText?: string;
   onSecondaryClick?: () => void;
 };
 
 export default function HeroActions({
-  primary,
-  secondaryLabel = "Watch The Video",
+  secondaryLabel = "Ver curso de SEO técnico (playlist)",
+  helperText = "Introducción y lecciones prácticas en YouTube",
   onSecondaryClick,
 }: HeroActionsProps) {
   return (
-    <div className="mt-7 flex flex-wrap items-center gap-4">
-      <Link
-        href={primary.href}
-        className="rounded-md bg-slate-900 px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-white hover:bg-slate-800"
-      >
-        {primary.label}
-      </Link>
+    <div className="mt-10 flex items-start gap-6">
+      {/* Flecha */}
+      <span className="hidden md:block text-3xl leading-none text-slate-400">→</span>
 
-      <button
-        type="button"
-        onClick={onSecondaryClick}
-        className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-slate-800"
-      >
-        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-amber-300 text-slate-900 shadow-sm">
-          ▶
-        </span>
-        {secondaryLabel}
-      </button>
+      {/* CTA + texto */}
+      <div className="flex flex-col">
+        <button
+          type="button"
+          onClick={onSecondaryClick}
+          className="group inline-flex items-center gap-4"
+        >
+          <span className="play-pulse inline-flex h-14 w-14 items-center justify-center rounded-full bg-amber-400 text-slate-900 shadow-lg transition-transform group-hover:scale-105">
+            ▶
+          </span>
+
+          <span className="text-sm font-semibold uppercase tracking-wide text-slate-800">
+            {secondaryLabel}
+          </span>
+        </button>
+
+        <span className="mt-1 pl-[72px] text-xs text-slate-500">{helperText}</span>
+      </div>
     </div>
   );
 }
