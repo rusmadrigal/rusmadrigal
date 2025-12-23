@@ -32,9 +32,7 @@ export default function HeroActions({
           </span>
         </button>
 
-        <span className="mt-1 pl-[72px] text-xs text-slate-500">
-
-        </span>
+        <span className="mt-1 pl-[72px] text-xs text-slate-500"></span>
       </div>
     </div>
   );

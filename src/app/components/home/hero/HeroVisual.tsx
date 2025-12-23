@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroVisual() {
   return (
-    <div className="relative flex items-end justify-center md:justify-end md:translate-y-10">
+    <div className="relative flex items-end justify-center md:justify-end">
       {/* glow */}
       <div className="pointer-events-none absolute right-0 top-1/2 -z-10 h-[150px] w-[520px] -translate-y-1/2 rounded-full bg-amber-200/70 blur-3xl" />
 
@@ -15,8 +15,6 @@ export default function HeroVisual() {
           priority
           className="object-contain object-bottom"
         />
-
-        {/* fade inferior */}
         <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#fbfbf6] to-transparent" />
       </div>
     </div>

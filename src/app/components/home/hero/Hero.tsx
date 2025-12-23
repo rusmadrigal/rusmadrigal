@@ -10,7 +10,9 @@ export default function Hero() {
         <HeroVisual />
       </div>
 
-      <HeroPartners />
+      <div className="-mt-8 md:-mt-12">
+        <HeroPartners />
+      </div>
     </section>
   );
 }
