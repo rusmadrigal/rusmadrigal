@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "./components/home/header/Header";
 import Hero from "./components/home/hero/Hero";
+import HomeAbout from "@/app/components/home/HomeAbout";
 
 const SERVICES = [
   {
@@ -104,37 +105,7 @@ export default function HomePage() {
       {/* Hero */}
 
       <Hero />
-
-      {/* About */}
-      <section className="mx-auto max-w-6xl px-6 py-14">
-        <div className="grid gap-8 md:grid-cols-2">
-          <div className="grid gap-4">
-            <div className="relative overflow-hidden rounded-2xl bg-white shadow-sm">
-              <div className="aspect-[16/10] bg-slate-100" />
-              <div className="absolute left-4 top-4 rounded-md bg-emerald-600 px-3 py-2 text-xs font-bold text-white">
-                300+ <div className="text-[10px] font-semibold opacity-90">Success Project</div>
-              </div>
-              <div className="absolute bottom-4 left-4 rounded-md bg-amber-300 px-3 py-2 text-xs font-bold text-slate-900">
-                100+ <div className="text-[10px] font-semibold opacity-90">Award Win</div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-3xl font-extrabold">Something Know About Me</h2>
-            <p className="mt-4 text-sm leading-6 text-slate-600">
-              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-              piece of classical Latin literature from 45 BC, it is over 2000 years old.
-            </p>
-            <Link
-              href="#"
-              className="mt-6 inline-flex rounded-md bg-slate-900 px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-white hover:bg-slate-800"
-            >
-              Know More
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HomeAbout />
 
       {/* Services */}
       <section className="mx-auto max-w-6xl px-6 py-14">
