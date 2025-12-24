@@ -10,7 +10,7 @@ export default function HeroContent() {
 
   return (
     <div>
-      <HeroTitle lines={["SEO Técnico", "y Rendimiento Web"]} />
+      <HeroTitle lines={["SEO Técnico", "& Web Performance"]} />
 
       <p className="mt-5 max-w-md text-sm leading-6 text-slate-600">
         Notas y recursos sobre rastreo, indexación, JavaScript SEO y Core Web Vitals. Enfoque

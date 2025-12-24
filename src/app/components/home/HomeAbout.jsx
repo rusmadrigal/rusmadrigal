@@ -10,7 +10,7 @@ export default function HomeAbout() {
                     <div className="aspect-[16/10]">
                         <Image
                             src="/images/home/seotech.webp"
-                            alt="SEO técnico y rendimiento web"
+                            alt="SEO Técnico & Web Performance"
                             fill
                             className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03] group-hover:translate-y-[-2px]"
                             priority
@@ -26,12 +26,13 @@ export default function HomeAbout() {
                 {/* Contenido */}
                 <div>
                     <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-slate-900 md:text-4xl">
-                        SEO Técnico & Web Performance
+                        SEO para buscadores y agentes de IA
                     </h2>
 
                     <p className="mt-4 text-sm leading-6 text-slate-600">
-                        Trabajo en SEO desde 2009. En los últimos 15 años me he enfocado en SEO técnico y web
-                        performance, participando en proyectos de turismo, deportes, finanzas, e-commerce,
+                        Trabajo en SEO desde 2009. En los últimos 15 años me he enfocado en SEO técnico,
+                        web performance y optimización para motores de búsqueda y agentes de IA,
+                        participando en proyectos de turismo, deportes, finanzas, e-commerce,
                         automotriz y otras industrias.
                     </p>
 
