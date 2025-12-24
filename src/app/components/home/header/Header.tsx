@@ -17,7 +17,7 @@ export default function Header() {
       <nav className="flex items-center justify-between">
         <HeaderLogo brandName="Rus Madrigal" tagline="SEO & Web Performance" />
         <HeaderNav items={NAV_ITEMS} />
-        <HeaderCTA href="#" label="Get Started" />
+        <HeaderCTA href="#" label="Contáctame" />
       </nav>
     </header>
   );
