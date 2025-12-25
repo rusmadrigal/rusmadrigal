@@ -4,34 +4,8 @@ import Hero from "./components/home/hero/Hero";
 import HomeAbout from "@/app/components/home/body/HomeAbout";
 import ServicesSection from "./components/home/body/ServicesSection";
 import FAQSection from "./components/home/body/FAQSection";
+import TestimonialsSection from "./components/home/body/Testimonials";
 
-const TESTIMONIALS = [
-  {
-    name: "Tusha Chowdhury",
-    role: "CEO at betano",
-    text: "Contrary to popular belief, Lorem Ipsum is not simply random text...",
-  },
-  {
-    name: "Andriyko Podliynk",
-    role: "CEO at betano",
-    text: "Contrary to popular belief, Lorem Ipsum is not simply random text...",
-  },
-  {
-    name: "Courtney Cook",
-    role: "CEO at betano",
-    text: "Contrary to popular belief, Lorem Ipsum is not simply random text...",
-  },
-  {
-    name: "Hiam Oliveira",
-    role: "CEO at betano",
-    text: "Contrary to popular belief, Lorem Ipsum is not simply random text...",
-  },
-  {
-    name: "Guilherme Stacanella",
-    role: "CEO at betano",
-    text: "Contrary to popular belief, Lorem Ipsum is not simply random text...",
-  },
-];
 
 const BLOG = [
   {
@@ -60,36 +34,9 @@ export default function HomePage() {
       <HomeAbout />
       <ServicesSection />
       <FAQSection />
+      <TestimonialsSection />
 
-      {/* Testimonials */}
-      <section className="mx-auto max-w-6xl px-6 py-14">
-        <div className="grid gap-6 md:grid-cols-2">
-          <div>
-            <h2 className="text-3xl font-extrabold">Clients Feedback</h2>
-            <p className="mt-3 text-sm leading-6 text-slate-600 max-w-md">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-            </p>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-2">
-            {TESTIMONIALS.map((t) => (
-              <div
-                key={t.name}
-                className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-100"
-              >
-                <p className="text-sm leading-6 text-slate-600">{t.text}</p>
-                <div className="mt-4 flex items-center gap-3">
-                  <div className="h-9 w-9 rounded-full bg-slate-200" />
-                  <div className="leading-tight">
-                    <div className="text-sm font-bold">{t.name}</div>
-                    <div className="text-xs text-slate-500">{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Blog */}
       <section className="mx-auto max-w-6xl px-6 py-14">
