@@ -8,7 +8,6 @@ import TestimonialsSection from "./components/home/body/Testimonials";
 import SEOInsightsSection from "./components/home/body/SEOInsightsSection";
 import LookerStudioTemplatesSection from "./components/home/body/LookerStudioTemplatesSection";
 import SEOAlertsSignupSection from "./components/home/body/SEOAlertsSignupSection";
-import SiteFooter from "./components/layout/SiteFooter";
 
 
 export default function HomePage() {
@@ -23,7 +22,6 @@ export default function HomePage() {
       <SEOInsightsSection />
       <LookerStudioTemplatesSection />
       <SEOAlertsSignupSection />
-      <SiteFooter />
     </div>
   );
 }
