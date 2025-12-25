@@ -37,7 +37,7 @@ export default function LookerStudioTemplatesSection() {
     <section className="mx-auto max-w-6xl px-6 py-14">
       <header className="text-center">
         <h2 className="text-3xl font-extrabold tracking-tight text-slate-900">
-          Looker Studio Templates
+          Plantillas de Looker Studio
         </h2>
         <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-600">
           Plantillas profesionales de Looker Studio para análisis SEO, rendimiento
@@ -75,7 +75,7 @@ export default function LookerStudioTemplatesSection() {
                 href={t.href}
                 className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-slate-900 transition hover:underline"
               >
-                Open template
+                Ver plantilla
                 <ExternalLink className="h-4 w-4" />
               </Link>
             </div>
