@@ -6,7 +6,6 @@ import ServicesSection from "./components/home/body/ServicesSection";
 import FAQSection from "./components/home/body/FAQSection";
 import TestimonialsSection from "./components/home/body/Testimonials";
 
-
 const BLOG = [
   {
     title: "Startup Marketing Solution For Business Owner",
@@ -35,8 +34,6 @@ export default function HomePage() {
       <ServicesSection />
       <FAQSection />
       <TestimonialsSection />
-
-      
 
       {/* Blog */}
       <section className="mx-auto max-w-6xl px-6 py-14">
