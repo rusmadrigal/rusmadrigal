@@ -1,31 +1,9 @@
 import Link from "next/link";
 import Header from "./components/home/header/Header";
 import Hero from "./components/home/hero/Hero";
-import HomeAbout from "@/app/components/home/HomeAbout";
-import ServicesSection from "./components/home/ServicesSection";
-
-const FAQ = [
-  {
-    q: "WHAT HARSH TRUTHS DO YOU PREFER TO IGNORE?",
-    a: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in classical Latin literature from 45 BC.",
-  },
-  {
-    q: "WHAT HARSH TRUTHS DO YOU PREFER TO IGNORE?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    q: "WHAT HARSH TRUTHS DO YOU PREFER TO IGNORE?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    q: "WHAT HARSH TRUTHS DO YOU PREFER TO IGNORE?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    q: "WHAT HARSH TRUTHS DO YOU PREFER TO IGNORE?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-];
+import HomeAbout from "@/app/components/home/body/HomeAbout";
+import ServicesSection from "./components/home/body/ServicesSection";
+import FAQSection from "./components/home/body/FAQSection";
 
 const TESTIMONIALS = [
   {
@@ -81,33 +59,7 @@ export default function HomePage() {
       <Hero />
       <HomeAbout />
       <ServicesSection />
-
-      {/* FAQ */}
-      <section className="mx-auto max-w-6xl px-6 py-14">
-        <h2 className="text-center text-3xl font-extrabold">
-          Frequently <br /> Asked <br /> Questions
-        </h2>
-
-        <div className="mx-auto mt-10 max-w-3xl space-y-3">
-          {FAQ.map((f, idx) => (
-            <details
-              key={`${f.q}-${idx}`}
-              className={`group overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-slate-100 ${
-                idx === 1 ? "border-l-4 border-slate-800" : ""
-              }`}
-              open={idx === 1}
-            >
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-4 py-3 text-xs font-bold uppercase tracking-wide text-slate-800">
-                {f.q}
-                <span className="inline-flex h-5 w-5 items-center justify-center rounded bg-amber-200 text-slate-900">
-                  +
-                </span>
-              </summary>
-              <div className="px-4 pb-4 text-sm leading-6 text-slate-600">{f.a}</div>
-            </details>
-          ))}
-        </div>
-      </section>
+      <FAQSection />
 
       {/* Testimonials */}
       <section className="mx-auto max-w-6xl px-6 py-14">

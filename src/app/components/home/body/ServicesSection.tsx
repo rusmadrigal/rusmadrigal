@@ -1,11 +1,4 @@
-import {
-  SearchCheck,
-  Gauge,
-  Code2,
-  Shuffle,
-  BarChart3,
-  Map,
-} from "lucide-react";
+import { SearchCheck, Gauge, Code2, Shuffle, BarChart3, Map } from "lucide-react";
 
 type Service = {
   title: string;
@@ -54,8 +47,8 @@ export default function ServicesSection() {
           Servicios de SEO Técnico y Rendimiento Web
         </h2>
         <p className="mt-3 text-sm leading-6 text-slate-600">
-          Mejoro rastreo, indexación y performance con medición clara y un roadmap
-          ejecutable. Sin humo.
+          Mejoro rastreo, indexación y performance con medición clara y un roadmap ejecutable. Sin
+          humo.
         </p>
       </header>
 
@@ -70,13 +63,9 @@ export default function ServicesSection() {
               {service.icon}
             </div>
 
-            <h3 className="mt-4 font-semibold tracking-tight">
-              {service.title}
-            </h3>
+            <h3 className="mt-4 font-semibold tracking-tight">{service.title}</h3>
 
-            <p className="mt-2 text-sm leading-6 text-slate-600">
-              {service.desc}
-            </p>
+            <p className="mt-2 text-sm leading-6 text-slate-600">{service.desc}</p>
 
             <div className="mt-5">
               <span className="inline-flex items-center gap-2 text-sm font-medium text-slate-900 transition group-hover:gap-3">
