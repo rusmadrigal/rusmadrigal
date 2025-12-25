@@ -2,33 +2,7 @@ import Link from "next/link";
 import Header from "./components/home/header/Header";
 import Hero from "./components/home/hero/Hero";
 import HomeAbout from "@/app/components/home/HomeAbout";
-
-const SERVICES = [
-  {
-    title: "Search Strategy",
-    desc: "Nulla porttitor accumsan tincidunt. Pellentesque adipiscing elit.",
-  },
-  {
-    title: "Social Marketing",
-    desc: "Nulla porttitor accumsan tincidunt. Pellentesque adipiscing elit.",
-  },
-  {
-    title: "Business Planning",
-    desc: "Nulla porttitor accumsan tincidunt. Pellentesque adipiscing elit.",
-  },
-  {
-    title: "Link Building",
-    desc: "Nulla porttitor accumsan tincidunt. Pellentesque adipiscing elit.",
-  },
-  {
-    title: "Report Analysis",
-    desc: "Nulla porttitor accumsan tincidunt. Pellentesque adipiscing elit.",
-  },
-  {
-    title: "CPA Marketing",
-    desc: "Nulla porttitor accumsan tincidunt. Pellentesque adipiscing elit.",
-  },
-];
+import ServicesSection from "./components/home/ServicesSection";
 
 const FAQ = [
   {
@@ -106,24 +80,7 @@ export default function HomePage() {
 
       <Hero />
       <HomeAbout />
-
-      {/* Services */}
-      <section className="mx-auto max-w-6xl px-6 py-14">
-        <h2 className="text-center text-3xl font-extrabold">What Services I Provide You</h2>
-
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {SERVICES.map((s) => (
-            <div key={s.title} className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
-              <div className="h-10 w-10 rounded-lg bg-amber-100" />
-              <h3 className="mt-4 font-bold">{s.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">{s.desc}</p>
-              <div className="mt-5 inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200">
-                →
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ServicesSection />
 
       {/* FAQ */}
       <section className="mx-auto max-w-6xl px-6 py-14">
