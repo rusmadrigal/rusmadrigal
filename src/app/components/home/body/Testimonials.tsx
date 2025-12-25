@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Quote } from "lucide-react";
+import { Quote, Linkedin } from "lucide-react";
 
 type Testimonial = {
   name: string;
@@ -7,6 +7,7 @@ type Testimonial = {
   text: string;
   highlight?: boolean;
   image?: string; // opcional: foto del cliente (si la tenés)
+  linkedinUrl?: string; // link para validar el review (perfil o recommendation)
 };
 
 const TESTIMONIALS: Testimonial[] = [
@@ -15,21 +16,26 @@ const TESTIMONIALS: Testimonial[] = [
     role: "Web Design & Development",
     text: "Encontrar SEO realmente buenos en Centroamérica es como buscar una aguja en un pajar. Si te cruzás con Rus, encontraste una aguja de oro. ¡Cuidalo!",
     highlight: true,
+    // Pegá aquí el link real (perfil o recommendation)
+    linkedinUrl: "",
   },
   {
     name: "Faith Anne Mulvihill",
     role: "Licensed Real Estate Broker (Chicago)",
     text: "Rus es un profesional polifacético con excelentes habilidades de atención al cliente. Responde siempre con una actitud profesional, positiva y genuinamente atenta en cada proyecto.",
+    linkedinUrl: "",
   },
   {
     name: "Irene Hidalgo",
     role: "Entrepreneur",
     text: "He tenido la oportunidad de trabajar con Rus en temas de SEO y puedo asegurar que es excelente. He aprendido mucho de él y es, sin duda, uno de los mejores SEOs que he conocido en Costa Rica.",
+    linkedinUrl: "",
   },
   {
     name: "Ken Armour",
     role: "Construction/Development at KBA Company",
     text: "He trabajado con Rus durante aproximadamente 6 años. Es una persona extremadamente conocedora, enérgica, organizada y detallista. Su apoyo ha ayudado a que mi empresa mejore y obtenga mejores resultados. Sin duda, seguiré utilizando sus servicios.",
+    linkedinUrl: "",
   },
 ];
 
@@ -54,6 +60,23 @@ function Avatar({ name, image }: { name: string; image?: string }) {
   );
 }
 
+function LinkedInLink({ url }: { url?: string }) {
+  if (!url) return null;
+
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 text-xs font-medium text-slate-500 transition hover:text-slate-900"
+      aria-label="Ver recomendación en LinkedIn"
+    >
+      <Linkedin className="h-4 w-4" />
+      Ver en LinkedIn
+    </a>
+  );
+}
+
 export default function TestimonialsSection() {
   const featured = TESTIMONIALS.find((t) => t.highlight) ?? TESTIMONIALS[0];
   const rest = TESTIMONIALS.filter((t) => t !== featured);
@@ -68,6 +91,7 @@ export default function TestimonialsSection() {
           </h2>
           <p className="mt-3 max-w-md text-sm leading-6 text-slate-600">
             Opiniones reales de personas con las que he trabajado en SEO, rendimiento web y soporte técnico.
+            Podés validar cada recomendación en LinkedIn.
           </p>
 
           {/* Imagen (placeholder listo para reemplazar) */}
@@ -79,8 +103,22 @@ export default function TestimonialsSection() {
                 alt="Clientes y proyectos de SEO"
                 fill
                 className="object-cover"
+                priority={false}
               />
             </div>
+          </div>
+
+          {/* CTA general (opcional) */}
+          <div className="mt-4">
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-4 py-2 text-xs font-semibold text-white transition hover:bg-slate-800"
+            >
+              <Linkedin className="h-4 w-4" />
+              Ver mi perfil en LinkedIn
+            </a>
           </div>
         </div>
 
@@ -94,12 +132,18 @@ export default function TestimonialsSection() {
 
             <p className="text-sm leading-6 text-slate-700">{featured.text}</p>
 
-            <div className="mt-5 flex items-center gap-3">
-              <Avatar name={featured.name} image={featured.image} />
-              <div className="leading-tight">
-                <div className="text-sm font-semibold text-slate-900">{featured.name}</div>
-                <div className="text-xs text-slate-500">{featured.role}</div>
+            <div className="mt-5 flex items-center justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <Avatar name={featured.name} image={featured.image} />
+                <div className="leading-tight">
+                  <div className="text-sm font-semibold text-slate-900">
+                    {featured.name}
+                  </div>
+                  <div className="text-xs text-slate-500">{featured.role}</div>
+                </div>
               </div>
+
+              <LinkedInLink url={featured.linkedinUrl} />
             </div>
           </article>
 
@@ -118,16 +162,27 @@ export default function TestimonialsSection() {
 
                 <p className="mt-2 text-sm leading-6 text-slate-600">{t.text}</p>
 
-                <div className="mt-4 flex items-center gap-3">
-                  <Avatar name={t.name} image={t.image} />
-                  <div className="leading-tight">
-                    <div className="text-sm font-semibold text-slate-900">{t.name}</div>
-                    <div className="text-xs text-slate-500">{t.role}</div>
+                <div className="mt-4 flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-3">
+                    <Avatar name={t.name} image={t.image} />
+                    <div className="leading-tight">
+                      <div className="text-sm font-semibold text-slate-900">
+                        {t.name}
+                      </div>
+                      <div className="text-xs text-slate-500">{t.role}</div>
+                    </div>
                   </div>
+
+                  <LinkedInLink url={t.linkedinUrl} />
                 </div>
               </article>
             ))}
           </div>
+
+          {/* Nota de verificación */}
+          <p className="text-xs leading-5 text-slate-500">
+            * Algunas recomendaciones pueden requerir iniciar sesión en LinkedIn para verse completas.
+          </p>
         </div>
       </div>
     </section>
