@@ -9,7 +9,6 @@ import SEOInsightsSection from "./components/home/body/SEOInsightsSection";
 import LookerStudioTemplatesSection from "./components/home/body/LookerStudioTemplatesSection";
 import SEOAlertsSignupSection from "./components/home/body/SEOAlertsSignupSection";
 
-
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#fbfbf6] text-slate-900">

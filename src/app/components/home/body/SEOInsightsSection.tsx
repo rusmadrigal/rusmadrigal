@@ -32,8 +32,8 @@ export default function SEOInsightsSection() {
           SEO Insights & Technical Analysis
         </h2>
         <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-600">
-          Análisis técnicos, auditorías reales y notas prácticas sobre SEO,
-          rendimiento web y arquitectura para buscadores y agentes IA.
+          Análisis técnicos, auditorías reales y notas prácticas sobre SEO, rendimiento web y
+          arquitectura para buscadores y agentes IA.
         </p>
       </header>
 
@@ -49,15 +49,13 @@ export default function SEOInsightsSection() {
             </div>
 
             <div className="p-5">
-              <h3 className="font-semibold leading-snug text-slate-900">
-                {b.title}
-              </h3>
+              <h3 className="font-semibold leading-snug text-slate-900">{b.title}</h3>
 
               <p className="mt-2 text-xs text-slate-500">{b.date}</p>
 
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                Insights técnicos basados en experiencia real, datos y casos
-                aplicados a proyectos de distintos mercados.
+                Insights técnicos basados en experiencia real, datos y casos aplicados a proyectos
+                de distintos mercados.
               </p>
 
               <Link

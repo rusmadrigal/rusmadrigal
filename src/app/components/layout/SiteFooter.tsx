@@ -12,14 +12,12 @@ export default function SiteFooter() {
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10">
                 <span className="h-3 w-3 rounded-full bg-emerald-400" />
               </span>
-              <span className="text-sm font-semibold tracking-wide">
-                Rus Madrigal
-              </span>
+              <span className="text-sm font-semibold tracking-wide">Rus Madrigal</span>
             </div>
 
             <p className="mt-4 text-sm leading-6 text-slate-300">
-              SEO técnico, rendimiento web y análisis de datos para buscadores y
-              agentes de IA. Enfoque práctico, sin humo.
+              SEO técnico, rendimiento web y análisis de datos para buscadores y agentes de IA.
+              Enfoque práctico, sin humo.
             </p>
           </div>
 

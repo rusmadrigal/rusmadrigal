@@ -7,11 +7,9 @@ export default function SEOAlertsSignupSection() {
         </h2>
 
         <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-600">
-          Actualizaciones puntuales sobre SEO técnico, cambios reales en Google,
-          dashboards de Looker Studio y recursos prácticos.
-          <strong className="font-semibold text-slate-700">
-            {" "}Sin spam. Sin humo.
-          </strong>
+          Actualizaciones puntuales sobre SEO técnico, cambios reales en Google, dashboards de
+          Looker Studio y recursos prácticos.
+          <strong className="font-semibold text-slate-700"> Sin spam. Sin humo.</strong>
         </p>
 
         <form className="mx-auto mt-6 flex max-w-xl flex-col gap-3 sm:flex-row">

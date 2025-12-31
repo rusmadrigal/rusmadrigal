@@ -40,8 +40,8 @@ export default function LookerStudioTemplatesSection() {
           Plantillas de Looker Studio
         </h2>
         <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-600">
-          Plantillas profesionales de Looker Studio para análisis SEO, rendimiento
-          web y reporting técnico. Listas para duplicar y usar.
+          Plantillas profesionales de Looker Studio para análisis SEO, rendimiento web y reporting
+          técnico. Listas para duplicar y usar.
         </p>
       </header>
 
@@ -63,13 +63,9 @@ export default function LookerStudioTemplatesSection() {
                 </span>
               )}
 
-              <h3 className="mt-3 font-semibold leading-snug text-slate-900">
-                {t.title}
-              </h3>
+              <h3 className="mt-3 font-semibold leading-snug text-slate-900">{t.title}</h3>
 
-              <p className="mt-3 text-sm leading-6 text-slate-600">
-                {t.description}
-              </p>
+              <p className="mt-3 text-sm leading-6 text-slate-600">{t.description}</p>
 
               <Link
                 href={t.href}
