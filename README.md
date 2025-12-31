@@ -20,16 +20,6 @@ building fast, scalable websites and data-driven SEO systems.
 - Analytics: GA4, Google Tag Manager, Adobe Analytics, Looker Studio
 - Infra: GitHub, Vercel
 
-### Selected Projects
-- **SaldoSimple** – Financial calculators & tools (MX)
-- **SmartCalcLab** – Advanced calculators (US)
-- **Arauze** – Data-driven platform for EU markets
-
-### Currently working on
-- SEO-friendly financial tools
-- Analytics-first SEO systems
-- Performance-focused web architectures
-
 ### Contact
 - LinkedIn: https://linkedin.com/in/tuusuario
 - Website: https://rusmadrigal.com
