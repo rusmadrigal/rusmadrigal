@@ -45,31 +45,30 @@ export async function getPlaylistVideos({
 
   const data = (await res.json()) as YouTubePlaylistItemsResponse;
 
-  const videos =
-    data.items
-      ?.map((it) => {
-        const sn = it.snippet;
-        const videoId = sn?.resourceId?.videoId;
-        if (!videoId) return null;
+  const videos = data.items
+    ?.map((it) => {
+      const sn = it.snippet;
+      const videoId = sn?.resourceId?.videoId;
+      if (!videoId) return null;
 
-        const thumb =
-          sn?.thumbnails?.high?.url ||
-          sn?.thumbnails?.medium?.url ||
-          sn?.thumbnails?.default?.url ||
-          "";
+      const thumb =
+        sn?.thumbnails?.high?.url ||
+        sn?.thumbnails?.medium?.url ||
+        sn?.thumbnails?.default?.url ||
+        "";
 
-        const title = sn?.title || "YouTube video";
-        const publishedAt = sn?.publishedAt || "";
+      const title = sn?.title || "YouTube video";
+      const publishedAt = sn?.publishedAt || "";
 
-        return {
-          videoId,
-          title,
-          publishedAt,
-          thumbnailUrl: thumb,
-          url: `https://www.youtube.com/watch?v=${videoId}`,
-        } satisfies YouTubePlaylistVideo;
-      })
-      .filter(Boolean) as YouTubePlaylistVideo[] | undefined;
+      return {
+        videoId,
+        title,
+        publishedAt,
+        thumbnailUrl: thumb,
+        url: `https://www.youtube.com/watch?v=${videoId}`,
+      } satisfies YouTubePlaylistVideo;
+    })
+    .filter(Boolean) as YouTubePlaylistVideo[] | undefined;
 
   return videos ?? [];
 }

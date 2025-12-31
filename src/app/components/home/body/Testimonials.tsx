@@ -34,13 +34,7 @@ const TESTIMONIALS: Testimonial[] = [
   },
 ];
 
-function LinkedInButton({
-  url,
-  label = "Ver en LinkedIn",
-}: {
-  url?: string;
-  label?: string;
-}) {
+function LinkedInButton({ url, label = "Ver en LinkedIn" }: { url?: string; label?: string }) {
   if (!url) return null;
 
   return (

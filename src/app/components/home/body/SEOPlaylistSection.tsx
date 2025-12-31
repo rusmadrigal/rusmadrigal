@@ -13,9 +13,7 @@ export default async function SEOPlaylistSection() {
   const playlistId = process.env.YOUTUBE_PLAYLIST_ID;
 
   const videos =
-    apiKey && playlistId
-      ? await getPlaylistVideos({ apiKey, playlistId, maxResults: 8 })
-      : [];
+    apiKey && playlistId ? await getPlaylistVideos({ apiKey, playlistId, maxResults: 8 }) : [];
 
   const shouldFallbackEmbed = !videos?.length && playlistId;
 

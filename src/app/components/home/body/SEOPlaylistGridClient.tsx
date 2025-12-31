@@ -103,9 +103,7 @@ export default function SEOPlaylistGridClient({ videos }: { videos: VideoUI[] })
             </div>
 
             <div className="p-4">
-              <div className="line-clamp-2 text-sm font-semibold text-slate-900">
-                {v.title}
-              </div>
+              <div className="line-clamp-2 text-sm font-semibold text-slate-900">{v.title}</div>
               <div className="mt-2 text-xs text-slate-500">{v.publishedLabel}</div>
             </div>
           </button>
@@ -178,9 +176,7 @@ export default function SEOPlaylistGridClient({ videos }: { videos: VideoUI[] })
 
             {/* Footer */}
             <div className="flex flex-col gap-2 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
-              <div className="text-xs text-slate-500">
-                Tip: clic afuera para cerrar.
-              </div>
+              <div className="text-xs text-slate-500">Tip: clic afuera para cerrar.</div>
 
               {activeId ? (
                 <a
