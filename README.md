@@ -1,85 +1,80 @@
-# Rusben Madrigal
+# Rus Madrigal
 
-**Technical SEO Engineer • Web Performance • Analytics**  
-San José, Costa Rica — I build search-friendly systems where **rendering, performance, and measurement** actually agree.
+Technical SEO / Web Performance / Analytics  
+San José, Costa Rica
 
----
-
-## A different kind of SEO profile
-
-Most profiles list tools.  
-Mine lists **constraints**—because that’s what ships in real systems.
-
-- **SEO is architecture**, not a checklist.
-- **Performance is a feature**, not a nice-to-have.
-- **Analytics is a decision system**, not a dashboard.
-- **AI is leverage**, not a substitute for judgment.
+I work on search-critical systems where **crawlability, rendering, performance, and measurement** must coexist without breaking each other.
 
 ---
 
-## How I work (my operating principles)
+## What I focus on
 
-**1) Make it crawlable**
-- Clean information architecture, internal linking models, crawl budget discipline  
-- Indexation control (canonicals, pagination, parameter strategy, sitemaps at scale)
+### Technical SEO as a systems problem
+- Information architecture at scale
+- Crawl budget control, indexation logic, canonicalization
+- Internal linking models that survive growth
+- Sitemaps and parameter strategies for large sites
 
-**2) Make it renderable**
-- JS/SSR/CSR realities, hydration tradeoffs, bot behavior  
-- Debug what *Google actually sees* (not what the browser shows)
+### JavaScript & rendering
+- SSR / CSR / hydration trade-offs
+- Debugging rendering and indexation issues in JS environments
+- Understanding differences between browser output and search engine rendering
 
-**3) Make it fast**
-- Core Web Vitals as an engineering constraint  
-- Performance budgets, regression prevention, measurable wins
+### Performance
+- Core Web Vitals as a hard constraint, not a KPI
+- Performance regression prevention
+- Measuring impact beyond lab metrics
 
-**4) Make it measurable**
-- GA4 + GTM + (when needed) Adobe Analytics  
-- Events that map to business outcomes, not vanity metrics
+### Measurement
+- Event design tied to business logic
+- GA4 + GTM implementations that support decision-making
+- Enterprise analytics contexts (including Adobe Analytics)
+
+---
+
+## Background (high level)
+
+Experience working on **large, multilingual, high-traffic websites**, across:
+- JS-driven and PHP-based stacks
+- Agency and enterprise environments
+- Close collaboration with engineering, analytics, and product teams
+
+Focus has consistently been on **diagnosing structural issues**, not surface-level optimization.
 
 ---
 
 ## What I build
 
-### Products / tools (active)
-- **SaldoSimple** — financial calculators & tools (MX)  
-- **SmartCalcLab** — advanced calculators (US), built for SEO + usability + exportable results
+### Active projects
+- **SaldoSimple** — financial calculators and SEO-driven tools (MX)
+- **SmartCalcLab** — calculation tools for the US market, built with SEO, performance, and data export in mind
 
-### Systems I care about
-- SEO-friendly web apps (Next.js / React)
-- Structured data that’s clean, non-duplicated, and scalable
+### Technical interests
+- SEO-friendly web applications
+- Structured data systems that remain valid at scale
 - Automation for audits, monitoring, and anomaly detection
 
 ---
 
-## What I’m strong at (the short list)
+## Tools I actually use
 
-- **Technical SEO:** site architecture, crawl/indexation, log analysis, JS SEO, structured data  
-- **Web Performance:** CWV optimization, performance monitoring, shipping sustainably  
-- **Analytics:** GA4, GTM, Looker Studio (and Adobe Analytics in enterprise contexts)  
-- **Engineering collaboration:** translate SEO requirements into dev-ready tickets + validation
-
----
-
-## Toolbelt (only what I actually use)
-
-- **Code:** JavaScript, HTML, CSS, SQL  
-- **Frameworks:** Next.js, React  
-- **SEO:** Screaming Frog, SEMrush (plus auditing/monitoring workflows)  
-- **Analytics:** GA4, GTM, Looker Studio, Adobe Analytics
+- **Languages:** JavaScript, HTML, CSS, SQL
+- **Frameworks:** Next.js, React
+- **SEO tooling:** Screaming Frog, SEMrush
+- **Analytics:** GA4, Google Tag Manager, Looker Studio, Adobe Analytics
 
 ---
 
-## If you’re hiring
+## When I’m a good fit
 
-I’m a fit when you need someone who can:
-- diagnose **complex technical SEO issues** across large sites
-- work comfortably with **engineers** (and speak their language)
-- ship **measurable improvements** (crawlability, CWV, indexation, tracking)
-
-**Best role fit:** Senior Technical SEO / Technical SEO Lead / SEO Engineer / Web Performance + SEO
+- Complex technical SEO problems
+- JS-rendered sites with indexation or performance issues
+- Situations where SEO, engineering, and analytics must align
+- Teams that value clear diagnostics over generic recommendations
 
 ---
 
 ## Contact
-- Email: rusbenmadrigal@gmail.com  
-- LinkedIn: www.linkedin.com/in/rusmadrigal  
+- Email: rusbenmadrigal@gmail.com
+- LinkedIn: www.linkedin.com/in/rusmadrigal
 - Portfolio: cv2026.vercel.app
