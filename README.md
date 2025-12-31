@@ -1,4 +1,4 @@
-# Rus Madrigal
+# Rusben Madrigal
 
 Technical SEO / Web Performance / Analytics  
 San José, Costa Rica
