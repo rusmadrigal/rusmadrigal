@@ -1,80 +1,35 @@
 # Rusben Madrigal
 
-Technical SEO / Web Performance / Analytics  
-San José, Costa Rica
+Senior Technical SEO & Web Performance  
+JavaScript • Next.js • Analytics • Structured Data
 
-I work on search-critical systems where **crawlability, rendering, performance, and measurement** must coexist without breaking each other.
+I work at the intersection of Technical SEO, web performance, and analytics,
+building fast, scalable websites and data-driven SEO systems.
 
----
+### What I do
+- Technical SEO for large-scale and multilingual websites
+- JavaScript SEO (Next.js, rendering, crawlability, indexation)
+- Core Web Vitals & performance optimization
+- Web analytics & measurement (GA4, GTM, Looker Studio)
+- Structured data & automation for SEO
 
-## What I focus on
+### Tech & Tools
+- Languages: JavaScript, HTML, CSS, SQL
+- Frameworks: Next.js, React
+- SEO: Screaming Frog, Sitebulb, Ahrefs, SEMrush
+- Analytics: GA4, Google Tag Manager, Adobe Analytics, Looker Studio
+- Infra: GitHub, Vercel
 
-### Technical SEO as a systems problem
-- Information architecture at scale
-- Crawl budget control, indexation logic, canonicalization
-- Internal linking models that survive growth
-- Sitemaps and parameter strategies for large sites
+### Selected Projects
+- **SaldoSimple** – Financial calculators & tools (MX)
+- **SmartCalcLab** – Advanced calculators (US)
+- **Arauze** – Data-driven platform for EU markets
 
-### JavaScript & rendering
-- SSR / CSR / hydration trade-offs
-- Debugging rendering and indexation issues in JS environments
-- Understanding differences between browser output and search engine rendering
+### Currently working on
+- SEO-friendly financial tools
+- Analytics-first SEO systems
+- Performance-focused web architectures
 
-### Performance
-- Core Web Vitals as a hard constraint, not a KPI
-- Performance regression prevention
-- Measuring impact beyond lab metrics
-
-### Measurement
-- Event design tied to business logic
-- GA4 + GTM implementations that support decision-making
-- Enterprise analytics contexts (including Adobe Analytics)
-
----
-
-## Background (high level)
-
-Experience working on **large, multilingual, high-traffic websites**, across:
-- JS-driven and PHP-based stacks
-- Agency and enterprise environments
-- Close collaboration with engineering, analytics, and product teams
-
-Focus has consistently been on **diagnosing structural issues**, not surface-level optimization.
-
----
-
-## What I build
-
-### Active projects
-- **SaldoSimple** — financial calculators and SEO-driven tools (MX)
-- **SmartCalcLab** — calculation tools for the US market, built with SEO, performance, and data export in mind
-
-### Technical interests
-- SEO-friendly web applications
-- Structured data systems that remain valid at scale
-- Automation for audits, monitoring, and anomaly detection
-
----
-
-## Tools I actually use
-
-- **Languages:** JavaScript, HTML, CSS, SQL
-- **Frameworks:** Next.js, React
-- **SEO tooling:** Screaming Frog, SEMrush
-- **Analytics:** GA4, Google Tag Manager, Looker Studio, Adobe Analytics
-
----
-
-## When I’m a good fit
-
-- Complex technical SEO problems
-- JS-rendered sites with indexation or performance issues
-- Situations where SEO, engineering, and analytics must align
-- Teams that value clear diagnostics over generic recommendations
-
----
-
-## Contact
-- Email: rusbenmadrigal@gmail.com
-- LinkedIn: www.linkedin.com/in/rusmadrigal
-- Portfolio: cv2026.vercel.app
+### Contact
+- LinkedIn: https://linkedin.com/in/tuusuario
+- Website: https://rusmadrigal.com
