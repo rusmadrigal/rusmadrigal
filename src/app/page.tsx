@@ -7,7 +7,7 @@ import FAQSection from "./components/home/body/FAQSection";
 import TestimonialsSection from "./components/home/body/Testimonials";
 import SEOInsightsSection from "./components/home/body/SEOInsightsSection";
 import LookerStudioTemplatesSection from "./components/home/body/LookerStudioTemplatesSection";
-import SEOAlertsSignupSection from "./components/home/body/SEOAlertsSignupSection";
+import SEOPlaylistSection from "./components/home/body/SEOPlaylistSection";
 
 export default function HomePage() {
   return (
@@ -20,7 +20,7 @@ export default function HomePage() {
       <TestimonialsSection />
       <SEOInsightsSection />
       <LookerStudioTemplatesSection />
-      <SEOAlertsSignupSection />
+      <SEOPlaylistSection />
     </div>
   );
 }

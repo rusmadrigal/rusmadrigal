@@ -67,3 +67,25 @@ body {
 .play-pulse {
   animation: play-pulse 2.5s ease-out infinite;
 }
+
+@keyframes arrowNudge {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateX(6px);
+    opacity: 1;
+  }
+}
+
+@keyframes arrowNudgeHover {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}

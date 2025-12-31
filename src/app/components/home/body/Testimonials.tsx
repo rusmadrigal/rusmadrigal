@@ -1,12 +1,11 @@
-import Image from "next/image";
-import { Quote, Linkedin } from "lucide-react";
+import { Quote, Linkedin, ArrowRight } from "lucide-react";
 
 type Testimonial = {
   name: string;
   role: string;
   text: string;
   highlight?: boolean;
-  image?: string; // (no se usa en cards, lo dejamos por si luego querés)
+  image?: string;
   linkedinUrl?: string;
 };
 
@@ -26,7 +25,6 @@ const TESTIMONIALS: Testimonial[] = [
     linkedinUrl:
       "https://www.linkedin.com/in/rusmadrigal/details/recommendations/?detailScreenTabIndex=0",
   },
-
   {
     name: "Ken Armour",
     role: "Construction/Development at KBA Company",
@@ -36,7 +34,13 @@ const TESTIMONIALS: Testimonial[] = [
   },
 ];
 
-function LinkedInButton({ url, label = "Ver en LinkedIn" }: { url?: string; label?: string }) {
+function LinkedInButton({
+  url,
+  label = "Ver en LinkedIn",
+}: {
+  url?: string;
+  label?: string;
+}) {
   if (!url) return null;
 
   return (
@@ -77,9 +81,9 @@ export default function TestimonialsSection() {
             técnico. Podés validar cada recomendación en LinkedIn.
           </p>
 
-          {/* Imagen con estilo tipo LinkedIn */}
+          {/* Panel tipo LinkedIn + Flecha animada */}
           <div className="mt-8 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
-            {/* “Chrome” superior estilo tarjeta */}
+            {/* “Chrome” superior */}
             <div className="flex items-center justify-between gap-3 border-b border-slate-200 bg-slate-50 px-4 py-3">
               <div className="flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
@@ -92,19 +96,66 @@ export default function TestimonialsSection() {
               </div>
             </div>
 
+            {/* Cuerpo */}
             <div className="group relative">
-              <div className="relative aspect-[16/10]">
-                <Image
-                  src="/images/home/reviews.webp"
-                  alt="Clientes y proyectos de SEO"
-                  fill
-                  className="object-cover transition duration-300 group-hover:scale-[1.02]"
-                  priority={false}
-                />
-              </div>
+              <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden">
+                {/* Fondo suave */}
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-100" />
+                <div className="absolute -left-10 top-10 h-40 w-40 rounded-full bg-slate-200/40 blur-2xl" />
+                <div className="absolute -right-10 bottom-10 h-40 w-40 rounded-full bg-slate-200/40 blur-2xl" />
 
-              {/* Borde interno sutil (look “card”) */}
-              <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-slate-200/60" />
+                {/* Flecha + copy */}
+                <div className="relative flex flex-col items-center gap-3 px-8 text-center">
+                  <div
+                    className="
+                      inline-flex h-14 w-14 items-center justify-center rounded-2xl
+                      bg-white/70 ring-1 ring-slate-200 shadow-sm
+                      transition-transform duration-300
+                      group-hover:scale-[1.03]
+                    "
+                  >
+                    <ArrowRight
+                      className="
+                        h-7 w-7 text-slate-700
+                        motion-safe:animate-[arrowNudge_1.8s_ease-in-out_infinite]
+                        group-hover:motion-safe:animate-[arrowNudgeHover_1.1s_ease-in-out_infinite]
+                      "
+                    />
+                  </div>
+
+                  <div className="max-w-sm">
+                    <div className="text-sm font-semibold text-slate-900">
+                      Validá mis recomendaciones
+                    </div>
+                    <div className="mt-1 text-xs leading-5 text-slate-600">
+                      Cada testimonio tiene link directo a LinkedIn para verificarlo.
+                    </div>
+                  </div>
+
+                  <div className="mt-1">
+                    <a
+                      href="https://www.linkedin.com/in/rusmadrigal/details/recommendations/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                        inline-flex items-center gap-2 rounded-full
+                        border border-slate-200 bg-white px-4 py-2
+                        text-xs font-semibold text-slate-700
+                        transition
+                        hover:border-[#0A66C2] hover:text-[#0A66C2]
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0A66C2]/40
+                      "
+                    >
+                      <Linkedin className="h-4 w-4" />
+                      Ver recomendaciones
+                      <ArrowRight className="h-4 w-4" />
+                    </a>
+                  </div>
+                </div>
+
+                {/* Borde interno */}
+                <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-slate-200/60" />
+              </div>
             </div>
           </div>
 
@@ -137,7 +188,6 @@ export default function TestimonialsSection() {
             <p className="pr-10 text-sm leading-6 text-slate-700">{featured.text}</p>
 
             <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              {/* Header sin avatar */}
               <div className="min-w-0">
                 <div className="text-sm font-semibold text-slate-900">{featured.name}</div>
                 <div className="mt-0.5 text-xs text-slate-500">{featured.role}</div>
@@ -161,7 +211,6 @@ export default function TestimonialsSection() {
                     <Quote className="h-6 w-6" />
                   </div>
 
-                  {/* Botón compacto (evita que se “apriete”) */}
                   <div className="shrink-0">
                     <LinkedInButton url={t.linkedinUrl} label="Validar" />
                   </div>
@@ -169,7 +218,6 @@ export default function TestimonialsSection() {
 
                 <p className="mt-3 text-sm leading-6 text-slate-600">{t.text}</p>
 
-                {/* Separador + nombre/rol (sin avatar) */}
                 <div className="mt-4 border-t border-slate-100 pt-4">
                   <div className="text-sm font-semibold text-slate-900">{t.name}</div>
                   <div className="mt-0.5 text-xs text-slate-500">{t.role}</div>
@@ -177,12 +225,6 @@ export default function TestimonialsSection() {
               </article>
             ))}
           </div>
-
-          {/* Nota */}
-          <p className="text-xs leading-5 text-slate-500">
-            * Si querés, puedo cambiar el link “Validar” para que vaya directo a cada recomendación
-            específica.
-          </p>
         </div>
       </div>
     </section>
