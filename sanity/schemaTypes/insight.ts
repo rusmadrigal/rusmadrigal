@@ -29,7 +29,6 @@ export const insight = defineType({
       title: 'Extracto / Resumen',
       type: 'text',
       rows: 3,
-      description: 'Resumen corto que se usa en listados, SEO y en el encabezado del artículo.',
       validation: (Rule) => Rule.required(),
     }),
 
@@ -37,6 +36,15 @@ export const insight = defineType({
       name: 'category',
       title: 'Categoría',
       type: 'string',
+      options: {
+        list: [
+          {title: 'SEO', value: 'seo'},
+          {title: 'Performance', value: 'performance'},
+          {title: 'Analytics', value: 'analytics'},
+          {title: 'AI & Search', value: 'ai-search'},
+        ],
+        layout: 'dropdown',
+      },
       validation: (Rule) => Rule.required(),
     }),
 
@@ -91,7 +99,6 @@ export const insight = defineType({
       title: 'Contenido del artículo',
       type: 'array',
       of: [{type: 'block'}],
-      description: 'Contenido principal del artículo. Usar encabezados H2/H3 para estructurar.',
       validation: (Rule) => Rule.required(),
     }),
   ],
