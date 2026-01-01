@@ -14,7 +14,7 @@ export default function CopyLinkButton({ className }: Props) {
         navigator.clipboard?.writeText(window.location.href);
       }}
     >
-      Copy link.
+      Copy link
     </button>
   );
 }

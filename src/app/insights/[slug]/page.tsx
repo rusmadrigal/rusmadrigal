@@ -84,9 +84,7 @@ const MOCK: Record<string, InsightArticle> = {
       {
         id: "implementation",
         heading: "Implementation checklist",
-        paragraphs: [
-          "This is the baseline checklist I use to move CWV without breaking the site.",
-        ],
+        paragraphs: ["This is the baseline checklist I use to move CWV without breaking the site."],
         bullets: [
           "Images: responsive sizes, modern formats, preload the LCP image",
           "CSS: reduce render blocking, avoid huge bundles, critical CSS where needed",
@@ -161,11 +159,7 @@ export async function generateMetadata({
 }
 
 // ---------- Page (Next 15+ params can be Promise) ----------
-export default async function InsightPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function InsightPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
   const article = MOCK[slug];
@@ -199,9 +193,7 @@ export default async function InsightPage({
             {article.title}
           </h1>
 
-          <p className="mt-4 max-w-3xl text-lg leading-7 text-slate-700">
-            {article.excerpt}
-          </p>
+          <p className="mt-4 max-w-3xl text-lg leading-7 text-slate-700">{article.excerpt}</p>
 
           {/* Meta row */}
           <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-slate-600">
@@ -245,9 +237,7 @@ export default async function InsightPage({
                 </div>
 
                 <div className="flex items-center gap-2">
-                <CopyLinkButton
-  className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 hover:bg-slate-50"
-/>
+                  <CopyLinkButton className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 hover:bg-slate-50" />
                   <Link
                     className="rounded-xl bg-slate-900 px-4 py-2 text-sm text-white hover:bg-slate-800"
                     href="/#contact"

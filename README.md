@@ -7,6 +7,7 @@ I work at the intersection of Technical SEO, web performance, and analytics,
 building fast, scalable websites and data-driven SEO systems.
 
 ### What I do
+
 - Technical SEO for large-scale and multilingual websites
 - JavaScript SEO (Next.js, rendering, crawlability, indexation)
 - Core Web Vitals & performance optimization
@@ -14,6 +15,7 @@ building fast, scalable websites and data-driven SEO systems.
 - Structured data & automation for SEO
 
 ### Tech & Tools
+
 - Languages: JavaScript, HTML, CSS, SQL
 - Frameworks: Next.js, React
 - SEO: Screaming Frog, Sitebulb, Ahrefs, SEMrush
@@ -21,5 +23,6 @@ building fast, scalable websites and data-driven SEO systems.
 - Infra: GitHub, Vercel
 
 ### Contact
+
 - LinkedIn: https://linkedin.com/in/tuusuario
 - Website: https://rusmadrigal.com
