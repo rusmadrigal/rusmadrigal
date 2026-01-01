@@ -1,4 +1,4 @@
-# Rusben Madrigal
+# Rus Madrigal
 
 Senior Technical SEO & Web Performance  
 JavaScript • Next.js • Analytics • Structured Data
