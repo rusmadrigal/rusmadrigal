@@ -17,10 +17,7 @@ export const insight = defineType({
       name: 'slug',
       title: 'Slug (URL)',
       type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
+      options: {source: 'title', maxLength: 96},
       validation: (Rule) => Rule.required(),
     }),
 
@@ -90,6 +87,69 @@ export const insight = defineType({
           name: 'role',
           title: 'Rol / Especialidad',
           type: 'string',
+        }),
+      ],
+    }),
+
+    // ✅ SEO (NEW)
+    defineField({
+      name: 'seo',
+      title: 'SEO',
+      type: 'object',
+      options: {collapsed: true, collapsible: true},
+      fields: [
+        defineField({
+          name: 'metaTitle',
+          title: 'Meta title',
+          type: 'string',
+          description: 'Si está vacío, se usa el título del insight.',
+          validation: (Rule) => Rule.max(60).warning('Ideal: <= 60 caracteres'),
+        }),
+        defineField({
+          name: 'metaDescription',
+          title: 'Meta description',
+          type: 'text',
+          rows: 2,
+          description: 'Si está vacío, se usa el extracto.',
+          validation: (Rule) => Rule.max(160).warning('Ideal: <= 160 caracteres'),
+        }),
+        defineField({
+          name: 'canonicalPath',
+          title: 'Canonical path',
+          type: 'string',
+          description: 'Ej: /insights/mi-slug. Si vacío, se genera automático.',
+          validation: (Rule) =>
+            Rule.custom((val) => {
+              if (!val) return true
+              if (typeof val !== 'string') return 'Debe ser string'
+              if (!val.startsWith('/')) return 'Debe iniciar con /'
+              return true
+            }),
+        }),
+        defineField({
+          name: 'ogImage',
+          title: 'OG Image',
+          type: 'image',
+          options: {hotspot: true},
+          fields: [
+            defineField({
+              name: 'alt',
+              title: 'Alt',
+              type: 'string',
+            }),
+          ],
+        }),
+        defineField({
+          name: 'noIndex',
+          title: 'No index',
+          type: 'boolean',
+          initialValue: false,
+        }),
+        defineField({
+          name: 'noFollow',
+          title: 'No follow',
+          type: 'boolean',
+          initialValue: false,
         }),
       ],
     }),

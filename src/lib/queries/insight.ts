@@ -5,17 +5,30 @@ export const INSIGHT_BY_SLUG_QUERY = `
   excerpt,
   category,
   publishedAt,
+
   author{
     name,
     role
   },
+
   coverImage{
-    asset->{
-      url
-    },
+    asset->{ url },
     alt,
     caption
   },
+
+  seo{
+    metaTitle,
+    metaDescription,
+    canonicalPath,
+    noIndex,
+    noFollow,
+    ogImage{
+      asset->{ url },
+      alt
+    }
+  },
+
   content
 }
 `;
