@@ -72,26 +72,16 @@ export const insight = defineType({
       ],
     }),
 
+    // ✅ AUTHOR (REFERENCE – ÚNICA FORMA CORRECTA)
     defineField({
       name: 'author',
       title: 'Autor',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'name',
-          title: 'Nombre',
-          type: 'string',
-          validation: (Rule) => Rule.required(),
-        }),
-        defineField({
-          name: 'role',
-          title: 'Rol / Especialidad',
-          type: 'string',
-        }),
-      ],
+      type: 'reference',
+      to: [{type: 'author'}],
+      validation: (Rule) => Rule.required(),
     }),
 
-    // ✅ SEO (NEW)
+    // ✅ SEO
     defineField({
       name: 'seo',
       title: 'SEO',

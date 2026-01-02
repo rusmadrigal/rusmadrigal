@@ -6,9 +6,14 @@ export const INSIGHT_BY_SLUG_QUERY = `
   category,
   publishedAt,
 
-  author{
+  author->{
     name,
-    role
+    role,
+    bio,
+    image{
+      asset->{ url },
+      alt
+    }
   },
 
   coverImage{

@@ -1,3 +1,4 @@
+// app/insights/[slug]/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -5,6 +6,7 @@ import { notFound } from "next/navigation";
 import Header from "@/app/components/home/header/Header";
 import CopyLinkButton from "@/app/components/insights/CopyLinkButton";
 import PortableTextRenderer from "@/app/components/insights/PortableTextRenderer";
+import AuthorCard from "@/app/components/insights/AuthorCard";
 
 import { sanityClient } from "@/lib/sanity.client";
 import { INSIGHT_BY_SLUG_QUERY } from "@/lib/queries/insight";
@@ -12,7 +14,7 @@ import { extractToc, type TocItem } from "@/lib/insights/extractToc";
 
 import type { PortableTextBlock } from "@portabletext/types";
 
-const SITE_URL = "https://rusmadrigal.com";
+const SITE_URL = "https://rusmadrigal.com"; // <-- CAMBIAR
 
 // ---------- Types ----------
 type InsightSEO = {
@@ -27,13 +29,23 @@ type InsightSEO = {
   };
 };
 
+type InsightAuthor = {
+  name: string;
+  role?: string;
+  bio?: string;
+  image?: {
+    asset?: { url: string };
+    alt?: string;
+  };
+};
+
 type Insight = {
   title: string;
   slug: string;
   excerpt: string;
   category: string;
   publishedAt: string;
-  author: { name: string; role?: string };
+  author?: InsightAuthor | null;
   coverImage?: {
     asset?: { url: string };
     alt?: string;
@@ -134,7 +146,12 @@ export async function generateMetadata({
       title: seoTitle,
       description: seoDesc,
       images: ogImg
-        ? [{ url: ogImg, alt: article.seo?.ogImage?.alt || article.coverImage?.alt || seoTitle }]
+        ? [
+            {
+              url: ogImg,
+              alt: article.seo?.ogImage?.alt || article.coverImage?.alt || seoTitle,
+            },
+          ]
         : undefined,
     },
     twitter: {
@@ -149,7 +166,11 @@ export async function generateMetadata({
 // ---------- JSON-LD ----------
 function JsonLd({ data }: { data: unknown }) {
   return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+    <script
+      type="application/ld+json"
+      // eslint-disable-next-line react/no-danger
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
   );
 }
 
@@ -174,10 +195,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
     headline: article.seo?.metaTitle?.trim() || article.title,
     description: article.seo?.metaDescription?.trim() || article.excerpt,
     datePublished: article.publishedAt,
-    author: {
-      "@type": "Person",
-      name: article.author.name,
-    },
+    author: article.author?.name ? { "@type": "Person", name: article.author.name } : undefined,
     mainEntityOfPage: canonical,
     image: article.seo?.ogImage?.asset?.url || article.coverImage?.asset?.url || undefined,
   };
@@ -196,7 +214,6 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
     <div className="min-h-screen bg-[#fbfbf6] text-slate-900">
       <Header />
 
-      {/* JSON-LD */}
       <JsonLd data={articleJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
 
@@ -216,12 +233,14 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
             <span className="text-slate-700">{prettyCategory(article.category)}</span>
           </div>
 
+          {/* Title + deck */}
           <h1 className="mt-4 text-4xl font-semibold tracking-tight text-slate-900 md:text-5xl">
             {article.title}
           </h1>
 
           <p className="mt-4 max-w-3xl text-lg leading-7 text-slate-700">{article.excerpt}</p>
 
+          {/* Meta row */}
           <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-slate-600">
             <span className="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-slate-700">
               {prettyCategory(article.category)}
@@ -232,8 +251,10 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
             <span>{readingTime}</span>
           </div>
 
+          {/* Cover */}
           {article.coverImage?.asset?.url ? (
             <figure className="mt-8 overflow-hidden rounded-2xl bg-white shadow-sm">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={article.coverImage.asset.url}
                 alt={article.coverImage.alt || article.title}
@@ -250,12 +271,21 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
 
         {/* Body grid */}
         <section className="grid gap-10 lg:grid-cols-12">
+          {/* Content */}
           <article className="lg:col-span-8">
             <div className="rounded-2xl bg-white p-6 shadow-sm md:p-8">
+              {/* Author mini row */}
               <div className="flex items-center justify-between gap-4 border-b border-slate-100 pb-6">
                 <div>
-                  <div className="text-sm font-semibold text-slate-900">{article.author.name}</div>
-                  {article.author.role ? (
+                  {article.author?.name ? (
+                    <div className="text-sm font-semibold text-slate-900">
+                      {article.author.name}
+                    </div>
+                  ) : (
+                    <div className="text-sm font-semibold text-slate-900">Author</div>
+                  )}
+
+                  {article.author?.role ? (
                     <div className="text-sm text-slate-600">{article.author.role}</div>
                   ) : null}
                 </div>
@@ -271,42 +301,22 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
                 </div>
               </div>
 
+              {/* Content */}
               <div className="prose prose-slate mt-8 max-w-none">
                 <PortableTextRenderer value={article.content} />
               </div>
 
-              <section className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
-                <div className="text-sm font-semibold text-slate-900">About the author</div>
-                {article.author.role ? (
-                  <div className="mt-1 text-sm text-slate-600">{article.author.role}</div>
-                ) : null}
-                <p className="mt-4 leading-7 text-slate-700">
-                  I help teams ship technical SEO and web performance improvements that scale.
-                  Focused on clean implementation, measurable impact, and collaboration with
-                  engineering.
-                </p>
-                <div className="mt-4 flex flex-wrap gap-3">
-                  <Link
-                    className="rounded-xl bg-slate-900 px-4 py-2 text-sm text-white hover:bg-slate-800"
-                    href="/#services"
-                  >
-                    See services
-                  </Link>
-                  <Link
-                    className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 hover:bg-slate-50"
-                    href="/#insights"
-                  >
-                    More insights
-                  </Link>
-                </div>
-              </section>
+              {/* Author card (only if author exists) */}
+              {article.author?.name ? <AuthorCard author={article.author} /> : null}
             </div>
 
+            {/* Related insights */}
             {related.length ? (
               <section className="mt-10">
                 <h3 className="text-xl font-semibold tracking-tight text-slate-900">
                   Related insights
                 </h3>
+
                 <div className="mt-5 grid gap-4 md:grid-cols-3">
                   {related.map((r) => (
                     <Link
@@ -328,8 +338,10 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
             ) : null}
           </article>
 
+          {/* Sidebar */}
           <aside className="lg:col-span-4">
             <div className="sticky top-24 space-y-6">
+              {/* TOC */}
               {toc.length ? (
                 <div className="rounded-2xl bg-white p-6 shadow-sm">
                   <div className="text-sm font-semibold text-slate-900">On this page</div>
@@ -347,6 +359,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
                 </div>
               ) : null}
 
+              {/* CTA */}
               <div className="rounded-2xl bg-slate-900 p-6 text-white shadow-sm">
                 <div className="text-sm font-semibold">Need help with SEO + performance?</div>
                 <p className="mt-2 text-sm text-white/80">
@@ -361,6 +374,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
                 </Link>
               </div>
 
+              {/* Utility card */}
               <div className="rounded-2xl bg-white p-6 shadow-sm">
                 <div className="text-sm font-semibold text-slate-900">What you’ll get</div>
                 <ul className="mt-3 list-disc pl-5 text-sm text-slate-700">
