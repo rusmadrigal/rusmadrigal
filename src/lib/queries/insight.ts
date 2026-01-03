@@ -37,3 +37,18 @@ export const INSIGHT_BY_SLUG_QUERY = `
   content
 }
 `;
+
+export const INSIGHTS_INDEX_QUERY = `
+*[_type == "insight"] | order(publishedAt desc, _createdAt desc){
+  _id,
+  title,
+  "slug": slug.current,
+  excerpt,
+  category,
+  publishedAt,
+  coverImage{
+    asset->{ url },
+    alt
+  }
+}
+`;
