@@ -78,10 +78,6 @@ export default async function SEOPlaylistSection() {
             <>
               {/* Client grid + modal */}
               <SEOPlaylistGridClient videos={videosForUI} />
-
-              <p className="mt-5 text-xs text-slate-500">
-                * Los videos se cargan automáticamente desde el playlist.
-              </p>
             </>
           )}
         </div>
