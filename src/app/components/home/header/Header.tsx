@@ -3,12 +3,10 @@ import HeaderNav, { NavItem } from "./HeaderNav";
 import HeaderCTA from "./HeaderCTA";
 
 const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "#", active: true },
-  { label: "About me", href: "#" },
-  { label: "Services", href: "#" },
-  { label: "FAQ", href: "#" },
-  { label: "Blog", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Inicio", href: "#", active: true },
+  { label: "Servicios", href: "#" },
+  { label: "Insights", href: "/insights" },
+  { label: "Hablemos", href: "#" },
 ];
 
 export default function Header() {
