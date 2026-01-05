@@ -2,7 +2,7 @@ import { defineField, defineType } from "sanity";
 
 export const lookerTemplate = defineType({
   name: "lookerTemplate",
-  title: "Plantilla de Looker Studio",
+  title: "Looker Studio",
   type: "document",
   fields: [
     defineField({
