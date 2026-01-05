@@ -34,10 +34,13 @@ function prettyDifficulty(value?: string) {
     intermediate: "Intermedio",
     advanced: "Avanzado",
   };
-  return value ? map[value] ?? value : null;
+  return value ? (map[value] ?? value) : null;
 }
 
-const FILTERS: Array<{ label: string; value: "all" | "seo" | "performance" | "analytics" | "content" }> = [
+const FILTERS: Array<{
+  label: string;
+  value: "all" | "seo" | "performance" | "analytics" | "content";
+}> = [
   { label: "Todas", value: "all" },
   { label: "SEO", value: "seo" },
   { label: "Web Performance", value: "performance" },

@@ -54,9 +54,7 @@ export const metadata: Metadata = {
 };
 
 export default async function LookerStudioHome() {
-  const templates: LookerTemplateCard[] = await sanityClient.fetch(
-    LOOKER_TEMPLATES_LIST_QUERY
-  );
+  const templates: LookerTemplateCard[] = await sanityClient.fetch(LOOKER_TEMPLATES_LIST_QUERY);
 
   return (
     <div className="min-h-screen bg-[#fbfbf6] text-slate-900">

@@ -80,7 +80,7 @@ function prettyDifficulty(value?: string) {
     intermediate: "Intermediate",
     advanced: "Advanced",
   };
-  return value ? map[value] ?? value : "—";
+  return value ? (map[value] ?? value) : "—";
 }
 
 function absUrl(pathOrUrl: string) {
@@ -105,22 +105,19 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
 
-  const doc: LookerTemplate | null = await sanityClient.fetch(
-    LOOKER_TEMPLATE_BY_SLUG_QUERY,
-    { slug }
-  );
+  const doc: LookerTemplate | null = await sanityClient.fetch(LOOKER_TEMPLATE_BY_SLUG_QUERY, {
+    slug,
+  });
 
   if (!doc) return { title: "Template not found" };
 
   const seoTitle = doc.seo?.metaTitle?.trim() || doc.title;
   const seoDesc = doc.seo?.metaDescription?.trim() || doc.excerpt;
 
-  const canonicalPath =
-    doc.seo?.canonicalPath?.trim() || `/looker-templates/${doc.slug}`;
+  const canonicalPath = doc.seo?.canonicalPath?.trim() || `/looker-templates/${doc.slug}`;
   const canonical = absUrl(canonicalPath);
 
-  const ogImg =
-    doc.seo?.ogImage?.asset?.url || doc.heroImage?.asset?.url || undefined;
+  const ogImg = doc.seo?.ogImage?.asset?.url || doc.heroImage?.asset?.url || undefined;
 
   const robots = {
     index: !(doc.seo?.noIndex ?? false),
@@ -162,22 +159,19 @@ export default async function LookerTemplatePage({
 }) {
   const { slug } = await params;
 
-  const template: LookerTemplate | null = await sanityClient.fetch(
-    LOOKER_TEMPLATE_BY_SLUG_QUERY,
-    { slug }
-  );
+  const template: LookerTemplate | null = await sanityClient.fetch(LOOKER_TEMPLATE_BY_SLUG_QUERY, {
+    slug,
+  });
 
   if (!template) notFound();
 
-  const related: RelatedTemplate[] = await sanityClient.fetch(
-    RELATED_LOOKER_TEMPLATES_QUERY,
-    { slug }
-  );
+  const related: RelatedTemplate[] = await sanityClient.fetch(RELATED_LOOKER_TEMPLATES_QUERY, {
+    slug,
+  });
 
   const toc: TocItem[] = extractToc(template.content);
 
-  const canonicalPath =
-    template.seo?.canonicalPath?.trim() || `/looker-templates/${template.slug}`;
+  const canonicalPath = template.seo?.canonicalPath?.trim() || `/looker-templates/${template.slug}`;
   const canonical = absUrl(canonicalPath);
 
   // JSON-LD: Looker template as CreativeWork (más correcto que Article)
@@ -234,9 +228,7 @@ export default async function LookerTemplatePage({
             {template.title}
           </h1>
 
-          <p className="mt-4 max-w-3xl text-lg leading-7 text-slate-700">
-            {template.excerpt}
-          </p>
+          <p className="mt-4 max-w-3xl text-lg leading-7 text-slate-700">{template.excerpt}</p>
 
           {/* Meta row */}
           <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-slate-600">
@@ -368,7 +360,9 @@ export default async function LookerTemplatePage({
                     <div className="text-sm font-semibold text-slate-900">Includes</div>
                     <ul className="mt-3 space-y-2 text-sm text-slate-700">
                       {template.sidebar.includes.map((x, i) => (
-                        <li key={`${x}-${i}`} className="leading-6">• {x}</li>
+                        <li key={`${x}-${i}`} className="leading-6">
+                          • {x}
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -379,7 +373,9 @@ export default async function LookerTemplatePage({
                     <div className="text-sm font-semibold text-slate-900">Requirements</div>
                     <ul className="mt-3 space-y-2 text-sm text-slate-700">
                       {template.sidebar.requirements.map((x, i) => (
-                        <li key={`${x}-${i}`} className="leading-6">• {x}</li>
+                        <li key={`${x}-${i}`} className="leading-6">
+                          • {x}
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -390,7 +386,9 @@ export default async function LookerTemplatePage({
                     <div className="text-sm font-semibold text-slate-900">Data sources</div>
                     <ul className="mt-3 space-y-2 text-sm text-slate-700">
                       {template.sidebar.dataSources.map((x, i) => (
-                        <li key={`${x}-${i}`} className="leading-6">• {x}</li>
+                        <li key={`${x}-${i}`} className="leading-6">
+                          • {x}
+                        </li>
                       ))}
                     </ul>
                   </div>

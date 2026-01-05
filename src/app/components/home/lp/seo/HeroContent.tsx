@@ -13,7 +13,8 @@ export default function HeroContent() {
       <HeroTitle lines={["Hola! soy Rus", "Consultor SEO"]} />
 
       <p className="mt-5 max-w-md text-sm leading-6 text-slate-600">
-        Consultor SEO senior en Costa Rica con más de 15 años de experiencia. Estrategias técnicas, SEO on-page y crecimiento orgánico real para negocios y marcas.
+        Consultor SEO senior en Costa Rica con más de 15 años de experiencia. Estrategias técnicas,
+        SEO on-page y crecimiento orgánico real para negocios y marcas.
       </p>
 
       {/* 👉 AQUÍ está la clave */}

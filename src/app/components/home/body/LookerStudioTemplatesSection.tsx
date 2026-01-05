@@ -38,9 +38,7 @@ function prettyCategory(value: string) {
 }
 
 export default async function LookerStudioTemplatesSection() {
-  const templates: LookerTemplate[] = await sanityClient.fetch(
-    LOOKER_TEMPLATES_HOME_QUERY
-  );
+  const templates: LookerTemplate[] = await sanityClient.fetch(LOOKER_TEMPLATES_HOME_QUERY);
 
   return (
     <section className="mx-auto max-w-6xl px-6 py-14">
@@ -81,13 +79,9 @@ export default async function LookerStudioTemplatesSection() {
                 {prettyCategory(t.category)}
               </span>
 
-              <h3 className="mt-3 font-semibold leading-snug text-slate-900">
-                {t.title}
-              </h3>
+              <h3 className="mt-3 font-semibold leading-snug text-slate-900">{t.title}</h3>
 
-              <p className="mt-3 text-sm leading-6 text-slate-600">
-                {t.excerpt}
-              </p>
+              <p className="mt-3 text-sm leading-6 text-slate-600">{t.excerpt}</p>
 
               <Link
                 href={`/looker-studio/${t.slug}`}
@@ -113,4 +107,3 @@ export default async function LookerStudioTemplatesSection() {
     </section>
   );
 }
-

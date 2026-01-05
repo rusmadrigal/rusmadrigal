@@ -5,6 +5,7 @@ export type Service = {
   title: string;
   description: string;
   bullets: string[];
+  icon: "gear" | "chart" | "puzzle" | "arrows" | "nodes" | "map";
 };
 
 export const SERVICES: Service[] = [
@@ -18,6 +19,7 @@ export const SERVICES: Service[] = [
       "Riesgos críticos y quick wins",
       "Criterios de QA para dev",
     ],
+    icon: "gear",
   },
   {
     id: "cwv",
@@ -29,6 +31,7 @@ export const SERVICES: Service[] = [
       "Plan de fixes por prioridad",
       "Validación antes/después",
     ],
+    icon: "chart",
   },
   {
     id: "dev",
@@ -40,6 +43,7 @@ export const SERVICES: Service[] = [
       "QA técnico pre/post release",
       "Checklists y guías de implementación",
     ],
+    icon: "puzzle",
   },
   {
     id: "migraciones",
@@ -51,6 +55,7 @@ export const SERVICES: Service[] = [
       "Redirecciones y validación",
       "Monitoreo post-launch + fixes",
     ],
+    icon: "arrows",
   },
   {
     id: "analitica",
@@ -62,6 +67,7 @@ export const SERVICES: Service[] = [
       "Segmentación por landings/mercados",
       "Dashboards accionables",
     ],
+    icon: "nodes",
   },
   {
     id: "roadmap",
@@ -73,5 +79,6 @@ export const SERVICES: Service[] = [
       "Priorización impacto/esfuerzo",
       "Alineación con objetivos de negocio",
     ],
+    icon: "map",
   },
 ];
