@@ -17,9 +17,7 @@ export default async function SEOPlaylistSection() {
   const playlistId = process.env.YOUTUBE_PLAYLIST_ID;
 
   const videos =
-    apiKey && playlistId
-      ? await getPlaylistVideos({ apiKey, playlistId, maxResults: 8 })
-      : [];
+    apiKey && playlistId ? await getPlaylistVideos({ apiKey, playlistId, maxResults: 8 }) : [];
 
   const shouldFallbackEmbed = !videos?.length && playlistId;
 
@@ -41,11 +39,9 @@ export default async function SEOPlaylistSection() {
                 SEO técnico en video
               </h2>
               <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-                Micro-lecciones y casos reales: auditorías, Core Web Vitals,
-                JavaScript SEO, dashboards y automatizaciones.{" "}
-                <strong className="font-semibold text-slate-700">
-                  Sin humo.
-                </strong>
+                Micro-lecciones y casos reales: auditorías, Core Web Vitals, JavaScript SEO,
+                dashboards y automatizaciones.{" "}
+                <strong className="font-semibold text-slate-700">Sin humo.</strong>
               </p>
             </div>
 
