@@ -315,7 +315,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
             {related.length ? (
               <section className="mt-10">
                 <h3 className="text-xl font-semibold tracking-tight text-slate-900">
-                  Related insights
+                  Más insights técnicos
                 </h3>
 
                 <div className="mt-5 grid gap-4 md:grid-cols-3">
@@ -331,7 +331,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
                       <div className="mt-3 text-base font-semibold text-slate-900 group-hover:underline">
                         {r.title}
                       </div>
-                      <div className="mt-3 text-sm text-slate-600">Read →</div>
+                      <div className="mt-3 text-sm text-slate-600">Leer →</div>
                     </Link>
                   ))}
                 </div>
