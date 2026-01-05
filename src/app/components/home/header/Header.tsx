@@ -4,7 +4,7 @@ import HeaderCTA from "./HeaderCTA";
 
 const NAV_ITEMS: NavItem[] = [
   { label: "Inicio", href: "#", active: true },
-  { label: "Servicios", href: "#" },
+  { label: "Servicios", href: "/seo" },
   { label: "Insights", href: "/insights" },
   { label: "Hablemos", href: "#" },
 ];
