@@ -13,6 +13,7 @@ import { INSIGHT_BY_SLUG_QUERY } from "@/lib/queries/insight";
 import { extractToc, type TocItem } from "@/lib/insights/extractToc";
 
 import type { PortableTextBlock } from "@portabletext/types";
+import CTASEOSection from "@/app/components/insights/CTASEOSection";
 
 const SITE_URL = "https://rusmadrigal.com"; // <-- CAMBIAR
 
@@ -147,11 +148,11 @@ export async function generateMetadata({
       description: seoDesc,
       images: ogImg
         ? [
-            {
-              url: ogImg,
-              alt: article.seo?.ogImage?.alt || article.coverImage?.alt || seoTitle,
-            },
-          ]
+          {
+            url: ogImg,
+            alt: article.seo?.ogImage?.alt || article.coverImage?.alt || seoTitle,
+          },
+        ]
         : undefined,
     },
     twitter: {
@@ -360,29 +361,12 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
               ) : null}
 
               {/* CTA */}
-              <div className="rounded-2xl bg-slate-900 p-6 text-white shadow-sm">
-                <div className="text-sm font-semibold">Need help with SEO + performance?</div>
-                <p className="mt-2 text-sm text-white/80">
-                  I work with teams to improve technical SEO, CWV, and measurement with clean,
-                  scalable implementation.
-                </p>
-                <Link
-                  href="/#contact"
-                  className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-100"
-                >
-                  Contact me
-                </Link>
-              </div>
+              <CTASEOSection />
 
-              {/* Utility card */}
-              <div className="rounded-2xl bg-white p-6 shadow-sm">
-                <div className="text-sm font-semibold text-slate-900">What you’ll get</div>
-                <ul className="mt-3 list-disc pl-5 text-sm text-slate-700">
-                  <li className="mt-2">Template-level prioritization</li>
-                  <li className="mt-2">Clear engineering tickets</li>
-                  <li className="mt-2">Measurement plan (GA4 / GSC / CWV)</li>
-                </ul>
-              </div>
+              {/* Utility card 
+              CTA for later
+              */}
+
             </div>
           </aside>
         </section>
