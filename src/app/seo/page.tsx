@@ -14,13 +14,13 @@ const SITE_URL = "https://rusmadrigal.com";
 export const metadata: Metadata = {
   title: "SEO en Costa Rica | Consultor SEO +15 años de experiencia",
   description:
-    "Consultoría SEO técnica y de performance en Costa Rica: auditorías, Core Web Vitals, soporte a desarrollo y migraciones SEO-safe.",
+    "Consultoría SEO técnica y de performance en Costa Rica: auditorías, Core Web Vitals, soporte a desarrollo y migraciones.",
   alternates: { canonical: `${SITE_URL}/seo` },
   openGraph: {
     type: "website",
-    title: "SEO técnico y performance | Consultoría",
+    title: "SEO en Costa Rica | Consultor SEO +15 años de experiencia",
     description:
-      "Auditorías profundas, Core Web Vitals y soporte técnico para equipos de desarrollo. Enfoque serio, ejecutable y medible.",
+      "Consultoría SEO técnica y de performance en Costa Rica: auditorías, Core Web Vitals, soporte a desarrollo y migraciones.",
     url: `${SITE_URL}/seo`,
   },
 };
