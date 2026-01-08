@@ -10,12 +10,14 @@ export default function SEOFinalCTA() {
       </p>
 
       <div className="mt-7 flex flex-wrap justify-center gap-3">
-        <Link
-          href="/#contact"
-          className="rounded-xl bg-white px-6 py-2.5 text-sm font-semibold text-slate-900 hover:bg-white/90"
+        <a
+          href="https://wa.me/50687773420?text=Hola,%20soy%20Rus%20Madrigal.%0A%0APara%20poder%20ayudarte%20mejor,%20¿podrías%20compartirme%20la%20siguiente%20información?%0A%0ASitio%20web:%0AEmail:%0AConsulta:"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-xl bg-white px-6 py-2.5 text-sm font-semibold text-slate-900 transition-colors hover:bg-white/90"
         >
-          Agendar llamada
-        </Link>
+          Contacto inicial
+        </a>
 
         <Link
           href="/looker-studio"
