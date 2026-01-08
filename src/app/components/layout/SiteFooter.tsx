@@ -17,7 +17,6 @@ export default function SiteFooter() {
 
             <p className="mt-4 text-sm leading-6 text-slate-300">
               SEO técnico, rendimiento web y análisis de datos para buscadores y agentes de IA.
-              Enfoque práctico, sin humo.
             </p>
           </div>
 
@@ -27,10 +26,9 @@ export default function SiteFooter() {
             <ul className="mt-4 space-y-2 text-sm text-slate-300">
               {[
                 { label: "Inicio", href: "/" },
-                { label: "Sobre mí", href: "/about" },
-                { label: "Servicios", href: "/services" },
+                { label: "Servicios", href: "/seo" },
                 { label: "SEO Insights", href: "/insights" },
-                { label: "Contacto", href: "/contact" },
+                { label: "Contacto", href: "/contacto" },
               ].map((x) => (
                 <li key={x.label}>
                   <Link href={x.href} className="hover:text-white">
@@ -87,10 +85,10 @@ export default function SiteFooter() {
           <div>© 2025 Rus Madrigal. Todos los derechos reservados.</div>
 
           <div className="flex gap-4">
-            <Link href="/privacy" className="hover:text-white">
+            <Link href="/privacidad" className="hover:text-white">
               Política de privacidad
             </Link>
-            <Link href="/terms" className="hover:text-white">
+            <Link href="/terminos" className="hover:text-white">
               Términos y condiciones
             </Link>
           </div>
