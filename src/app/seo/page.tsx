@@ -9,7 +9,7 @@ import SEOServices from "@/app/components/home/lp/seo/SEOServices";
 import SEOMethodology from "@/app/components/home/lp/seo/SEOMethodology";
 import SEOFinalCTA from "@/app/components/home/lp/seo/SEOFinalCTA";
 
-const SITE_URL = "https://rusmadrigal.com"; // <-- Cambiar si aplica
+const SITE_URL = "https://rusmadrigal.com";
 
 export const metadata: Metadata = {
   title: "SEO en Costa Rica | Consultor SEO Senior (+15 años de experiencia)",
