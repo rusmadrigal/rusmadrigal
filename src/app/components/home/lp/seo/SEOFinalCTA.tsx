@@ -21,7 +21,7 @@ export default function SEOFinalCTA() {
           href="/looker-studio"
           className="rounded-xl border border-white/20 bg-white/5 px-6 py-2.5 text-sm font-semibold text-white hover:bg-white/10"
         >
-          Ver casos de estudio
+          Casos de estudio
         </Link>
       </div>
     </section>

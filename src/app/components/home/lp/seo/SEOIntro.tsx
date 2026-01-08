@@ -63,19 +63,11 @@ export default function SEOIntro() {
 
           <div className="relative mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link
-              href="/#contact"
-              className="inline-flex items-center justify-center rounded-xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-slate-800"
-            >
-              Agendar llamada
-            </Link>
-
-            <Link
               href="#servicios"
-              className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+              className="inline-flex items-center justify-center rounded-xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-slate-800"
             >
               Ver servicios
             </Link>
-
             <div className="text-xs text-slate-500 sm:ml-2">
               Respuesta típica:{" "}
               <span className="font-semibold text-slate-700">24–48h</span>

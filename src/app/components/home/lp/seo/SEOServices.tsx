@@ -15,8 +15,7 @@ export default function SEOServices() {
         </div>
 
         <Link
-          href="/#contact"
-          className="rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800"
+          href="https://wa.me/50687773420?text=Hola,%20soy%20Rus%20Madrigal.%0A%0APara%20poder%20ayudarte%20mejor,%20¿podrías%20compartirme%20la%20siguiente%20información?%0A%0ASitio%20web:%0AEmail:%0AConsulta:"
         >
           Consultar disponibilidad
         </Link>
