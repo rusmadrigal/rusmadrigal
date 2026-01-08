@@ -12,9 +12,9 @@ import SEOFinalCTA from "@/app/components/home/lp/seo/SEOFinalCTA";
 const SITE_URL = "https://rusmadrigal.com";
 
 export const metadata: Metadata = {
-  title: "SEO en Costa Rica | Consultor SEO Senior (+15 años de experiencia)",
+  title: "SEO en Costa Rica | Consultor SEO +15 años de experiencia",
   description:
-    "Consultoría de SEO técnico y performance: auditoría, Core Web Vitals, soporte a desarrollo, migraciones SEO-safe y medición (GA4 + GSC). Enfoque ejecutable y medible.",
+    "Consultoría SEO técnica y de performance en Costa Rica: auditorías, Core Web Vitals, soporte a desarrollo y migraciones SEO-safe.",
   alternates: { canonical: `${SITE_URL}/seo` },
   openGraph: {
     type: "website",
