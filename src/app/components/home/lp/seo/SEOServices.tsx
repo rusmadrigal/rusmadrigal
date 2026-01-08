@@ -1,6 +1,9 @@
-import Link from "next/link";
+import { MessageCircle } from "lucide-react";
 import { SERVICES } from "./data";
 import ServiceBGIcon from "./ServiceBGIcon";
+
+const WHATSAPP_URL =
+  "https://wa.me/50687773420?text=Hola,%20soy%20Rus%20Madrigal.%0A%0APara%20poder%20ayudarte%20mejor,%20¿podrías%20compartirme%20la%20siguiente%20información?%0A%0ASitio%20web:%0AEmail:%0AConsulta:";
 
 export default function SEOServices() {
   return (
@@ -8,17 +11,25 @@ export default function SEOServices() {
       {/* Header */}
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-slate-900">Servicios</h2>
+          <h2 className="text-2xl font-semibold tracking-tight text-slate-900">
+            Servicios
+          </h2>
           <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-            Servicios modulares. Se pueden ejecutar como proyecto puntual o acompañamiento continuo.
+            Servicios modulares. Se pueden ejecutar como proyecto puntual o
+            acompañamiento continuo.
           </p>
         </div>
 
-        <Link
-          href="https://wa.me/50687773420?text=Hola,%20soy%20Rus%20Madrigal.%0A%0APara%20poder%20ayudarte%20mejor,%20¿podrías%20compartirme%20la%20siguiente%20información?%0A%0ASitio%20web:%0AEmail:%0AConsulta:"
+        {/* External link: use <a>, not next/link */}
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transform-gpu transition-all duration-300 ease-out hover:bg-slate-800 hover:-translate-y-0.5"
         >
-          Consultar disponibilidad
-        </Link>
+          <MessageCircle className="h-4 w-4" />
+          Contacto por WhatsApp
+        </a>
       </div>
 
       {/* Cards */}
