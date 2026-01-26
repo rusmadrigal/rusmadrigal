@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
-    default: "Consultor SEO Internacional | +15 años de experiencia",
+    default: "Consultor SEO Costa Rica | +15 años de experiencia",
     template: "%s | Rus Madrigal",
   },
 
