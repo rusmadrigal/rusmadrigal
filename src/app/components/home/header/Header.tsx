@@ -10,7 +10,7 @@ import { Menu, X } from "lucide-react";
 
 const NAV_ITEMS: NavItem[] = [
   { label: "Inicio", href: "/" },
-  { label: "Servicios", href: "/seo" },
+  { label: "Soluciones", href: "/seo" },
   { label: "Insights", href: "/insights" },
   { label: "Recursos", href: "/looker-studio" },
 ];
