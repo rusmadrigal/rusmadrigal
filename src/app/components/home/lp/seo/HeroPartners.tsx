@@ -18,7 +18,7 @@ export default function HeroPartners() {
       {/* Leyenda */}
       <div className="flex items-center">
         <p className="text-sm font-medium leading-relaxed text-slate-600">
-        Trayectoria profesional
+          Trayectoria profesional
         </p>
       </div>
 

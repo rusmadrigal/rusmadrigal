@@ -158,11 +158,11 @@ export async function generateMetadata({
       description: seoDesc,
       images: ogImg
         ? [
-          {
-            url: ogImg,
-            alt: article.seo?.ogImage?.alt || article.coverImage?.alt || seoTitle,
-          },
-        ]
+            {
+              url: ogImg,
+              alt: article.seo?.ogImage?.alt || article.coverImage?.alt || seoTitle,
+            },
+          ]
         : undefined,
     },
     twitter: {
