@@ -64,7 +64,7 @@ export default function Header() {
         <div className="hidden md:block">
           <HeaderCTA
             href="https://wa.me/50687773420?text=Hola,%20soy%20Rus%20Madrigal.%0A%0APara%20poder%20ayudarte%20mejor,%20%C2%BFpodr%C3%ADas%20compartirme%20la%20siguiente%20informaci%C3%B3n?%0A%0ASitio%20web:%0AEmail:%0AConsulta:"
-            label="Contáctame"
+            label="Hablemos"
           />
         </div>
 
@@ -135,7 +135,7 @@ export default function Header() {
                   <div className="mt-3">
                     <HeaderCTA
                       href="https://wa.me/50687773420?text=Hola,%20soy%20Rus%20Madrigal.%0A%0APara%20poder%20ayudarte%20mejor,%20%C2%BFpodr%C3%ADas%20compartirme%20la%20siguiente%20informaci%C3%B3n?%0A%0ASitio%20web:%0AEmail:%0AConsulta:"
-                      label="Contáctame"
+                      label="Hablemos"
                     />
                   </div>
                 </div>
