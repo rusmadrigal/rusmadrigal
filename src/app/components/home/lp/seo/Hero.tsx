@@ -1,0 +1,18 @@
+import HeroContent from "./HeroContent";
+import HeroVisual from "./HeroVisual";
+import HeroPartners from "./HeroPartners";
+
+export default function HeroSEO() {
+  return (
+    <section className="mx-auto max-w-6xl px-6 pt-4 pb-0">
+      <div className="grid items-center gap-10 md:grid-cols-2">
+        <HeroContent />
+        <HeroVisual />
+      </div>
+
+      <div className="-mt-8 md:-mt-12">
+        <HeroPartners />
+      </div>
+    </section>
+  );
+}
