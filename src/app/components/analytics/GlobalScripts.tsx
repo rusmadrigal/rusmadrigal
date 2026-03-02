@@ -6,7 +6,7 @@ const GTM_ID = "GTM-K2HNLR7W";
 export default function GlobalScripts() {
   return (
     <>
-      {/* Google Tag Manager */}
+      {/* Google Tag Manager Script */}
       <Script id="gtm-init" strategy="afterInteractive">
         {`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
