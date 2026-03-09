@@ -99,7 +99,7 @@ export default async function InsightsPage() {
           </p>
         </section>
 
-        {/* Client Grid */}
+        {/* Client Grid Home*/}
         <InsightsIndexClient insights={insights} />
       </main>
     </div>
