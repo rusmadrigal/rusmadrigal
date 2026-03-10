@@ -1,4 +1,4 @@
-# Rus Madrigal
+# Rusben Madrigal
 
 Senior Technical SEO & Web Performance  
 JavaScript • Next.js • Analytics • Structured Data
@@ -25,4 +25,4 @@ building fast, scalable websites and data-driven SEO systems.
 ### Contact
 
 - LinkedIn: https://linkedin.com/in/rusmadrigal
-- Website: https://www.rusmadrigal.com
+- My latest SEO experiment: https://www.smartcalclab.com/
