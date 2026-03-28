@@ -22,7 +22,6 @@ building fast, scalable websites and data-driven SEO systems.
 - Analytics: GA4, Google Tag Manager, Adobe Analytics, Looker Studio
 - Infra: GitHub, Vercel
 
-### Contact
+### SEO Lab
 
-- LinkedIn: https://linkedin.com/in/rusmadrigal
 - My latest SEO experiment: https://www.smartcalclab.com/
