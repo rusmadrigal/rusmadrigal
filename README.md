@@ -24,4 +24,4 @@ building fast, scalable websites and data-driven SEO systems.
 
 ### SEO Lab
 
-- My latest SEO experiment: https://www.smartcalclab.com/
+- My latest SEO experiment: https://smartcalclab-frontend.vercel.app/
